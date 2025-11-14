@@ -10,12 +10,12 @@ import (
 	"math"
 	"strings"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 	flag "github.com/spf13/pflag"
 	"k8s.io/apimachinery/pkg/util/validation/field"
 
-	"github.com/gardener/landscaper-service/pkg/apis/core"
-	"github.com/gardener/landscaper-service/pkg/webhook"
+	"github.com/openmcp-project/landscaper-service/pkg/apis/core"
+	"github.com/openmcp-project/landscaper-service/pkg/webhook"
 )
 
 func defaultWebhookedResources() map[string]webhook.WebhookedResourceDefinition {

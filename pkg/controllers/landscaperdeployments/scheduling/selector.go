@@ -7,8 +7,8 @@ package scheduling
 import (
 	"fmt"
 
-	"github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	"github.com/gardener/landscaper-service/pkg/utils"
+	"github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper-service/pkg/utils"
 )
 
 func EvaluateSelectorList(selectors []v1alpha1.Selector, deployment *v1alpha1.LandscaperDeployment) (bool, error) {

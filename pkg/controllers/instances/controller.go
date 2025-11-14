@@ -20,16 +20,16 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-	kutils "github.com/gardener/landscaper/controller-utils/pkg/kubernetes"
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
-	lc "github.com/gardener/landscaper/controller-utils/pkg/logging/constants"
+	kutils "github.com/openmcp-project/landscaper/controller-utils/pkg/kubernetes"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
+	lc "github.com/openmcp-project/landscaper/controller-utils/pkg/logging/constants"
 
-	config "github.com/gardener/landscaper-service/pkg/apis/config/v1alpha1"
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	lsserrors "github.com/gardener/landscaper-service/pkg/apis/errors"
-	"github.com/gardener/landscaper-service/pkg/controllers/healthwatcher"
-	"github.com/gardener/landscaper-service/pkg/operation"
-	"github.com/gardener/landscaper-service/pkg/utils"
+	config "github.com/openmcp-project/landscaper-service/pkg/apis/config/v1alpha1"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	lsserrors "github.com/openmcp-project/landscaper-service/pkg/apis/errors"
+	"github.com/openmcp-project/landscaper-service/pkg/controllers/healthwatcher"
+	"github.com/openmcp-project/landscaper-service/pkg/operation"
+	"github.com/openmcp-project/landscaper-service/pkg/utils"
 )
 
 var letterRunes = []rune("abcdefghijklmnopqrstuvwxyz")

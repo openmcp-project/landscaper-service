@@ -14,9 +14,9 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	"github.com/gardener/landscaper-service/pkg/controllers/subjectsync"
-	"github.com/gardener/landscaper-service/test/utils/envtest"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper-service/pkg/controllers/subjectsync"
+	"github.com/openmcp-project/landscaper-service/test/utils/envtest"
 )
 
 func TestConfig(t *testing.T) {

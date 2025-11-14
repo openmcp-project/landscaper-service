@@ -9,10 +9,10 @@ import (
 
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 
-	lsconfig "github.com/gardener/landscaper/apis/config"
-	"github.com/gardener/landscaper/controller-utils/pkg/crdmanager"
+	lsconfig "github.com/openmcp-project/landscaper/apis/config"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/crdmanager"
 
-	config "github.com/gardener/landscaper-service/pkg/apis/config/v1alpha1"
+	config "github.com/openmcp-project/landscaper-service/pkg/apis/config/v1alpha1"
 )
 
 const (

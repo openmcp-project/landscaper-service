@@ -14,9 +14,9 @@ import (
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
 
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 )
 
 var (
@@ -25,7 +25,7 @@ var (
 
 const (
 	// LaasComponentDefault is the default Landscaper As A Service component name
-	LaasComponentDefault = "github.com/gardener/landscaper-service"
+	LaasComponentDefault = "github.com/openmcp-project/landscaper-service"
 	// RepoRootDir is the laas repository root directory
 	RepoRootDir = "./.."
 )

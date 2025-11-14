@@ -21,10 +21,6 @@ github.com/fxamacker/cbor/v2 v2.9.0 h1:NpKPmjDBgUfBms6tr6JZkTHtfFGcMKsw3eGcmD/sa
 github.com/fxamacker/cbor/v2 v2.9.0/go.mod h1:vM4b+DJCtHn+zz7h3FFp/hDAI9WNWCsZj23V5ytsSxQ=
 github.com/gardener/component-spec/bindings-go v0.0.98 h1:noougWGxAQHr3ipqA2vbZ3qwodZ7wWX24QTD+zcZf7M=
 github.com/gardener/component-spec/bindings-go v0.0.98/go.mod h1:qr7kADDXbXB0huul+ih/B43YkwyiMFYQepp/tqJ331c=
-github.com/gardener/landscaper/apis v0.144.0 h1:LoukSbyvI0mhI87F1xObIYRuSNGYTSDTi8jAOiwICi8=
-github.com/gardener/landscaper/apis v0.144.0/go.mod h1:vgFuM1ZU1NHR3HyrR9ryDdzntuk2PwqDxnSW69KeyY4=
-github.com/gardener/landscaper/controller-utils v0.144.0 h1:Z69Q25kbqH5wKVq0HlFuBq573N87mQKgnK8zvnBg3MM=
-github.com/gardener/landscaper/controller-utils v0.144.0/go.mod h1:ik8sdOuNyfUQspyZfrq53z4zOKtS6XoqpRsYfzOdyu4=
 github.com/ghodss/yaml v1.0.0 h1:wQHKEahhL6wmXdzwWG11gIVCkOv05bNOh+Rxn0yngAk=
 github.com/ghodss/yaml v1.0.0/go.mod h1:4dBDuWmgqj2HViK6kFavaiC9ZROes6MMH2rRYeMEF04=
 github.com/gkampitakis/ciinfo v0.3.2 h1:JcuOPk8ZU7nZQjdUhctuhQofk7BGHuIy0c9Ez8BNhXs=
@@ -102,6 +98,10 @@ github.com/onsi/ginkgo/v2 v2.27.2 h1:LzwLj0b89qtIy6SSASkzlNvX6WktqurSHwkk2ipF/Ns
 github.com/onsi/ginkgo/v2 v2.27.2/go.mod h1:ArE1D/XhNXBXCBkKOLkbsb2c81dQHCRcF5zwn/ykDRo=
 github.com/onsi/gomega v1.38.2 h1:eZCjf2xjZAqe+LeWvKb5weQ+NcPwX84kqJ0cZNxok2A=
 github.com/onsi/gomega v1.38.2/go.mod h1:W2MJcYxRGV63b418Ai34Ud0hEdTVXq9NW9+Sx6uXf3k=
+github.com/openmcp-project/landscaper/apis v1.0.0 h1:Nci614p0euzCKSSFkQsvbAFsUdc0bS3QEfa326M6x6M=
+github.com/openmcp-project/landscaper/apis v1.0.0/go.mod h1:CNN0S03jdvmc63vrPQFXYAtfzNDg9uwA9K9TYU48euY=
+github.com/openmcp-project/landscaper/controller-utils v1.0.0 h1:e0zJkIxRVh99tz8Rs9TS3H2OtBUhK9/xs8pjRHElb7M=
+github.com/openmcp-project/landscaper/controller-utils v1.0.0/go.mod h1:PRNeDo+IYxq5tE7CPZNXW92hG4CTfK6C3NohDfL33AY=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=

@@ -10,10 +10,10 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
-	config "github.com/gardener/landscaper-service/pkg/apis/config/v1alpha1"
-	"github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
+	config "github.com/openmcp-project/landscaper-service/pkg/apis/config/v1alpha1"
+	"github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 )
 
 // AddControllerToManager adds the AvailabilityMonitorRegistrationController to the manager

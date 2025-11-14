@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 	rbacv1 "k8s.io/api/rbac/v1"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 )
 
 // CreateSubjectsForSubjectList converts the subjects of the SubjectList custom resource into rbac subjects.

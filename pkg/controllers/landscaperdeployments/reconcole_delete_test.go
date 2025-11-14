@@ -9,21 +9,21 @@ import (
 	"errors"
 	"time"
 
-	lsserrors "github.com/gardener/landscaper-service/pkg/apis/errors"
+	lsserrors "github.com/openmcp-project/landscaper-service/pkg/apis/errors"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	kutil "github.com/gardener/landscaper/controller-utils/pkg/kubernetes"
+	kutil "github.com/openmcp-project/landscaper/controller-utils/pkg/kubernetes"
 	"k8s.io/apimachinery/pkg/types"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	deploymentscontroller "github.com/gardener/landscaper-service/pkg/controllers/landscaperdeployments"
-	"github.com/gardener/landscaper-service/pkg/operation"
-	testutils "github.com/gardener/landscaper-service/test/utils"
-	"github.com/gardener/landscaper-service/test/utils/envtest"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	deploymentscontroller "github.com/openmcp-project/landscaper-service/pkg/controllers/landscaperdeployments"
+	"github.com/openmcp-project/landscaper-service/pkg/operation"
+	testutils "github.com/openmcp-project/landscaper-service/test/utils"
+	"github.com/openmcp-project/landscaper-service/test/utils/envtest"
 )
 
 var _ = Describe("Delete", func() {

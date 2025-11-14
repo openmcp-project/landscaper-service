@@ -13,9 +13,9 @@ import (
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	v1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
+	v1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 
-	config "github.com/gardener/landscaper-service/pkg/apis/config/v1alpha1"
+	config "github.com/openmcp-project/landscaper-service/pkg/apis/config/v1alpha1"
 
 	"github.com/onsi/gomega"
 	"k8s.io/apimachinery/pkg/types"
@@ -51,7 +51,7 @@ func ShouldNotReconcile(ctx context.Context, reconciler reconcile.Reconciler, re
 func DefaultControllerConfiguration() *config.LandscaperServiceConfiguration {
 	cfg := &config.LandscaperServiceConfiguration{
 		LandscaperServiceComponent: config.LandscaperServiceComponentConfiguration{
-			Name:    "github.com/gardener/landscaper-service/landscaper-instance",
+			Name:    "github.com/openmcp-project/landscaper-service/landscaper-instance",
 			Version: "v1.1.1",
 		},
 		AvailabilityMonitoring: config.AvailabilityMonitoringConfiguration{

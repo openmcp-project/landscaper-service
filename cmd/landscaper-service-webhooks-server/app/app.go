@@ -21,12 +21,12 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	ctrlwebhook "sigs.k8s.io/controller-runtime/pkg/webhook"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
-	webhookcert "github.com/gardener/landscaper/controller-utils/pkg/webhook"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
+	webhookcert "github.com/openmcp-project/landscaper/controller-utils/pkg/webhook"
 
-	"github.com/gardener/landscaper-service/pkg/apis/core/install"
-	"github.com/gardener/landscaper-service/pkg/version"
-	"github.com/gardener/landscaper-service/pkg/webhook"
+	"github.com/openmcp-project/landscaper-service/pkg/apis/core/install"
+	"github.com/openmcp-project/landscaper-service/pkg/version"
+	"github.com/openmcp-project/landscaper-service/pkg/webhook"
 )
 
 // NewLandscaperServiceWebhooksCommand creates a new command for the landscaper service webhooks server

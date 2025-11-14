@@ -11,17 +11,18 @@ import (
 
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 
-	lssutils "github.com/gardener/landscaper-service/pkg/utils"
+	lssutils "github.com/openmcp-project/landscaper-service/pkg/utils"
 
 	"k8s.io/apimachinery/pkg/types"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
 	cliutil "github.com/gardener/landscapercli/pkg/util"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	"github.com/gardener/landscaper-service/test/integration/pkg/test"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+
+	"github.com/openmcp-project/landscaper-service/test/integration/pkg/test"
 )
 
 type UpdateDeploymentRunner struct {

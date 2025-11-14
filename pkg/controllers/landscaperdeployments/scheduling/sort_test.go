@@ -9,8 +9,8 @@ import (
 	. "github.com/onsi/gomega"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	lssscheduling "github.com/gardener/landscaper-service/pkg/controllers/landscaperdeployments/scheduling"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	lssscheduling "github.com/openmcp-project/landscaper-service/pkg/controllers/landscaperdeployments/scheduling"
 )
 
 var _ = Describe("SortServiceTargetConfigs", func() {

@@ -9,7 +9,7 @@ import (
 
 	"k8s.io/apimachinery/pkg/util/json"
 
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 )
 
 // InstallationSpecDeepEquals test whether two installation specs are deeply equal.

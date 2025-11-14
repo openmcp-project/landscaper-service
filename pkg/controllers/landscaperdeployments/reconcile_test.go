@@ -9,20 +9,20 @@ import (
 	"errors"
 	"time"
 
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
-	kutil "github.com/gardener/landscaper/controller-utils/pkg/kubernetes"
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
+	kutil "github.com/openmcp-project/landscaper/controller-utils/pkg/kubernetes"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 	"k8s.io/apimachinery/pkg/types"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	lsserrors "github.com/gardener/landscaper-service/pkg/apis/errors"
-	deploymentscontroller "github.com/gardener/landscaper-service/pkg/controllers/landscaperdeployments"
-	"github.com/gardener/landscaper-service/pkg/operation"
-	"github.com/gardener/landscaper-service/pkg/utils"
-	testutils "github.com/gardener/landscaper-service/test/utils"
-	"github.com/gardener/landscaper-service/test/utils/envtest"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	lsserrors "github.com/openmcp-project/landscaper-service/pkg/apis/errors"
+	deploymentscontroller "github.com/openmcp-project/landscaper-service/pkg/controllers/landscaperdeployments"
+	"github.com/openmcp-project/landscaper-service/pkg/operation"
+	"github.com/openmcp-project/landscaper-service/pkg/utils"
+	testutils "github.com/openmcp-project/landscaper-service/test/utils"
+	"github.com/openmcp-project/landscaper-service/test/utils/envtest"
 )
 
 var _ = Describe("Reconcile", func() {

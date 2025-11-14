@@ -8,7 +8,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/gardener/landscaper-service/pkg/apis/config/v1alpha1"
+	"github.com/openmcp-project/landscaper-service/pkg/apis/config/v1alpha1"
 )
 
 // Operation is the base type for all controller types.

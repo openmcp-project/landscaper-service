@@ -9,15 +9,15 @@ import (
 	"fmt"
 	"strings"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 )
 
 // This file contains the API of the landscaper-service component "installation-blueprint" resource.
-// github.com/gardener/landscaper-service/landscaper-instance
+// github.com/openmcp-project/landscaper-service/landscaper-instance
 
 const (
 	// UseInMemoryOverlayDefault is default value for the landscaper cache in memory overlay configuration.
@@ -91,7 +91,7 @@ const (
 
 // CacheConfig specifies the landscaper registry cache configuration.
 type CacheConfig struct {
-	// UseInMemoryOverly - see github.com/gardener/landscaper/apis/config OCICacheConfiguration.UseInMemoryOverly
+	// UseInMemoryOverly - see github.com/openmcp-project/landscaper/apis/config OCICacheConfiguration.UseInMemoryOverly
 	UseInMemoryOverly bool `json:"useInMemoryOverly"`
 }
 
@@ -99,9 +99,9 @@ type CacheConfig struct {
 type RegistryConfig struct {
 	// Cache is the cache configuration.
 	Cache CacheConfig `json:"cache"`
-	// AllowPlainHttpRegistries - see github.com/gardener/landscaper/apis/config OCIConfiguration.AllowPlainHttp
+	// AllowPlainHttpRegistries - see github.com/openmcp-project/landscaper/apis/config OCIConfiguration.AllowPlainHttp
 	AllowPlainHttpRegistries bool `json:"allowPlainHttpRegistries"`
-	// InsecureSkipVerify - see github.com/gardener/landscaper/apis/config OCIConfiguration.InsecureSkipVerify
+	// InsecureSkipVerify - see github.com/openmcp-project/landscaper/apis/config OCIConfiguration.InsecureSkipVerify
 	InsecureSkipVerify bool `json:"insecureSkipVerify"`
 }
 

@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gardener/landscaper-service/cmd/landscaper-service-webhooks-server/app"
+	"github.com/openmcp-project/landscaper-service/cmd/landscaper-service-webhooks-server/app"
 )
 
 func main() {

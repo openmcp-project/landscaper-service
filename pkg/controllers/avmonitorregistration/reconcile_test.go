@@ -13,15 +13,15 @@ import (
 
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
-	"github.com/gardener/landscaper-service/pkg/operation"
-	"github.com/gardener/landscaper-service/test/utils/envtest"
+	"github.com/openmcp-project/landscaper-service/pkg/operation"
+	"github.com/openmcp-project/landscaper-service/test/utils/envtest"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 
-	avmonitorregistration "github.com/gardener/landscaper-service/pkg/controllers/avmonitorregistration"
-	testutils "github.com/gardener/landscaper-service/test/utils"
+	avmonitorregistration "github.com/openmcp-project/landscaper-service/pkg/controllers/avmonitorregistration"
+	testutils "github.com/openmcp-project/landscaper-service/test/utils"
 )
 
 var _ = Describe("Reconcile", func() {
