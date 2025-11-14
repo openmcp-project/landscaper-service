@@ -8,8 +8,8 @@ import (
 	"context"
 	"strings"
 
-	kutils "github.com/gardener/landscaper/controller-utils/pkg/kubernetes"
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	kutils "github.com/openmcp-project/landscaper/controller-utils/pkg/kubernetes"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 	rbacv1 "k8s.io/api/rbac/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -18,9 +18,9 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-	config "github.com/gardener/landscaper-service/pkg/apis/config/v1alpha1"
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	"github.com/gardener/landscaper-service/pkg/operation"
+	config "github.com/openmcp-project/landscaper-service/pkg/apis/config/v1alpha1"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper-service/pkg/operation"
 )
 
 type Controller struct {

@@ -1,15 +1,15 @@
-module github.com/gardener/landscaper-service
+module github.com/openmcp-project/landscaper-service
 
 go 1.25.4
 
 require (
 	github.com/gardener/component-spec/bindings-go v0.0.98
-	github.com/gardener/landscaper/apis v0.144.0
-	github.com/gardener/landscaper/controller-utils v0.144.0
 	github.com/go-logr/logr v1.4.3
 	github.com/google/uuid v1.6.0
 	github.com/onsi/ginkgo/v2 v2.27.2
 	github.com/onsi/gomega v1.38.2
+	github.com/openmcp-project/landscaper/apis v1.0.0
+	github.com/openmcp-project/landscaper/controller-utils v1.0.0
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.10.1
 	github.com/spf13/pflag v1.0.10

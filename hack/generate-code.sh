@@ -16,9 +16,9 @@ fi
 if [[ -z ${CONTROLLER_GEN:-} ]]; then
   CONTROLLER_GEN="$LOCALBIN/controller-gen"
 fi
-LAAS_MODULE_PATH="github.com/gardener/landscaper-service"
+LAAS_MODULE_PATH="github.com/openmcp-project/landscaper-service"
 
-# Code generation expects this repo to lie under <whatever>/github.com/gardener/landscaper-service, so let's verify that this is the case.
+# Code generation expects this repo to lie under <whatever>/github.com/openmcp-project/landscaper-service, so let's verify that this is the case.
 src_path="$(realpath "$PROJECT_ROOT")"
 for parent in $(tr '/' '\n' <<< $LAAS_MODULE_PATH | tac); do
   if [[ "$src_path" != */$parent ]]; then

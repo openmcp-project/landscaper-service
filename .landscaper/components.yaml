@@ -1,5 +1,5 @@
 components:
-  - name: github.com/gardener/landscaper-service
+  - name: github.com/openmcp-project/landscaper-service
     version: ${VERSION}
     provider:
       name: ${PROVIDER}
@@ -11,13 +11,13 @@ components:
           type: github
           commit: ${COMMIT_SHA}
           ref: refs/tags/${VERSION}
-          repoUrl: github.com/gardener/landscaper-service
+          repoUrl: github.com/openmcp-project/landscaper-service
     componentReferences:
       - name: landscaper-instance
-        componentName: github.com/gardener/landscaper-service/landscaper-instance
+        componentName: github.com/openmcp-project/landscaper-service/landscaper-instance
         version: ${VERSION}
       - name: ingress-controller
-        componentName: github.com/gardener/landscaper-service/ingress-controller
+        componentName: github.com/openmcp-project/landscaper-service/ingress-controller
         version: ${VERSION}
     resources:
       - name: landscaper-service-blueprint
@@ -58,7 +58,7 @@ components:
           - landscaper-service-target-shoot-sidecar-server:${VERSION}-linux-arm64
           repository: images/landscaper-service-target-shoot-sidecar-server
 
-  - name: github.com/gardener/landscaper-service/landscaper-instance
+  - name: github.com/openmcp-project/landscaper-service/landscaper-instance
     version: ${VERSION}
     provider:
       name: ${PROVIDER}
@@ -70,7 +70,7 @@ components:
           type: github
           commit: ${COMMIT_SHA}
           ref: refs/tags/${VERSION}
-          repoUrl: github.com/gardener/landscaper-service
+          repoUrl: github.com/openmcp-project/landscaper-service
     componentReferences:
       - name: landscaper
         componentName: github.com/gardener/landscaper
@@ -181,7 +181,7 @@ components:
           compress: true
           mediaType: application/vnd.gardener.landscaper.jsonschema.layer.v1.json
 
-  - name: github.com/gardener/landscaper-service/ingress-controller
+  - name: github.com/openmcp-project/landscaper-service/ingress-controller
     version: ${VERSION}
     provider:
       name: ${PROVIDER}
@@ -193,7 +193,7 @@ components:
           type: github
           commit: ${COMMIT_SHA}
           ref: refs/tags/${VERSION}
-          repoUrl: github.com/gardener/landscaper-service
+          repoUrl: github.com/openmcp-project/landscaper-service
     resources:
       - name: ingress-controller-blueprint
         type: landscaper.gardener.cloud/blueprint

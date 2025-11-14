@@ -12,10 +12,10 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
-	configinstall "github.com/gardener/landscaper-service/pkg/apis/config/install"
-	"github.com/gardener/landscaper-service/pkg/apis/config/v1alpha1"
+	configinstall "github.com/openmcp-project/landscaper-service/pkg/apis/config/install"
+	"github.com/openmcp-project/landscaper-service/pkg/apis/config/v1alpha1"
 
 	flag "github.com/spf13/pflag"
 	ctrl "sigs.k8s.io/controller-runtime"

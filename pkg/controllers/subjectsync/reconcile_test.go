@@ -8,10 +8,10 @@ import (
 	"context"
 	"reflect"
 
-	kutil "github.com/gardener/landscaper/controller-utils/pkg/kubernetes"
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
+	kutil "github.com/openmcp-project/landscaper/controller-utils/pkg/kubernetes"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 	corev1 "k8s.io/api/core/v1"
 	rbacv1 "k8s.io/api/rbac/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
@@ -19,11 +19,11 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-	"github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	"github.com/gardener/landscaper-service/pkg/controllers/subjectsync"
-	"github.com/gardener/landscaper-service/pkg/operation"
-	testutils "github.com/gardener/landscaper-service/test/utils"
-	"github.com/gardener/landscaper-service/test/utils/envtest"
+	"github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper-service/pkg/controllers/subjectsync"
+	"github.com/openmcp-project/landscaper-service/pkg/operation"
+	testutils "github.com/openmcp-project/landscaper-service/test/utils"
+	"github.com/openmcp-project/landscaper-service/test/utils/envtest"
 )
 
 var _ = Describe("Reconcile", func() {

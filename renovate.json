@@ -62,7 +62,7 @@
       ],
       "enabled": false,
       "matchPackageNames": [
-        "/github.com/gardener/landscaper-service/"
+        "/github.com/openmcp-project/landscaper-service/"
       ]
     },
     {
@@ -92,16 +92,16 @@
     },
     {
       "matchPackageNames": [
-        "github.com/gardener/landscaper",
-        "github.com/gardener/landscaper/apis",
-        "github.com/gardener/landscaper/controller-utils"
+        "github.com/openmcp-project/landscaper",
+        "github.com/openmcp-project/landscaper/apis",
+        "github.com/openmcp-project/landscaper/controller-utils"
       ],
       "description": "Update references in go.mod, integration-test/go.mod and .landscaper/ocm-settings.yaml",
       "rebaseWhen": "auto",
       "automerge": true,
       "automergeType": "pr-comment",
       "automergeComment": "chore(deps): new Landscaper version references (automerge)",
-      "groupName": "gardener/landscaper",
+      "groupName": "openmcp-project/landscaper",
       "groupSlug": "landscaper",
       "matchFileNames": [
         "go.mod",
@@ -141,7 +141,7 @@
       "matchStrings": [
         "LANDSCAPER_VERSION:\\s*v(?<currentValue>\\S+)"
       ],
-      "depNameTemplate": "gardener/landscaper",
+      "depNameTemplate": "openmcp-project/landscaper",
       "datasourceTemplate": "github-tags"
     },
     {

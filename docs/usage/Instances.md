@@ -48,7 +48,7 @@ status:
     namespace: my-namespace
     
   landscaperServiceComponent:
-    name: github.com/gardener/landscaper-service/landscaper-instance
+    name: github.com/openmcp-project/landscaper-service/landscaper-instance
     version: v0.19.0
 
   clusterEndpoint: "10.0.0.1:1234"

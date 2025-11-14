@@ -10,10 +10,10 @@ import (
 
 	"k8s.io/apimachinery/pkg/types"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
 	cliutil "github.com/gardener/landscapercli/pkg/util"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
-	"github.com/gardener/landscaper-service/test/integration/pkg/test"
+	"github.com/openmcp-project/landscaper-service/test/integration/pkg/test"
 )
 
 type UninstallLAASTestRunner struct {

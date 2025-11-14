@@ -9,7 +9,7 @@ import (
 
 	"k8s.io/apimachinery/pkg/util/validation/field"
 
-	"github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 )
 
 // ValidateSecretReference validates a secret reference

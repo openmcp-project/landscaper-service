@@ -11,10 +11,10 @@ import (
 	cliutil "github.com/gardener/landscapercli/pkg/util"
 	"k8s.io/apimachinery/pkg/types"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	"github.com/gardener/landscaper-service/test/integration/pkg/test"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper-service/test/integration/pkg/test"
 )
 
 type DeleteDeploymentRunner struct {

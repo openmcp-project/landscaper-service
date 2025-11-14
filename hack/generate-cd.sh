@@ -41,7 +41,7 @@ echo "> Transfer Component version ${EFFECTIVE_VERSION} to ${PROVIDER}"
 ocm ${OCM_CONFIG} transfer ctf --copy-resources --recursive --overwrite --lookup ${PROVIDER} ${COMPONENT_ARCHIVE_PATH} ${PROVIDER}
 
 echo "> Remote Component Version Landscaper Service"
-ocm get componentversion --repo OCIRegistry::${PROVIDER} "github.com/gardener/landscaper-service:${EFFECTIVE_VERSION}" -o yaml
+ocm get componentversion --repo OCIRegistry::${PROVIDER} "github.com/openmcp-project/landscaper-service:${EFFECTIVE_VERSION}" -o yaml
 
 echo "> Remote Component Version Landscaper Instance"
-ocm get componentversion --repo OCIRegistry::${PROVIDER} "github.com/gardener/landscaper-service/landscaper-instance:${EFFECTIVE_VERSION}" -o yaml
+ocm get componentversion --repo OCIRegistry::${PROVIDER} "github.com/openmcp-project/landscaper-service/landscaper-instance:${EFFECTIVE_VERSION}" -o yaml

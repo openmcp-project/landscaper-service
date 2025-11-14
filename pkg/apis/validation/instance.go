@@ -7,7 +7,7 @@ package validation
 import (
 	"fmt"
 
-	"github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 
 	apivalidation "k8s.io/apimachinery/pkg/api/validation"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

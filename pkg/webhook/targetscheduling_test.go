@@ -7,14 +7,14 @@ package webhook_test
 import (
 	"context"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	"github.com/gardener/landscaper-service/pkg/webhook"
-	"github.com/gardener/landscaper-service/test/utils/envtest"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper-service/pkg/webhook"
+	"github.com/openmcp-project/landscaper-service/test/utils/envtest"
 )
 
 func createTargetScheduling(name, namespace string) *lssv1alpha1.TargetScheduling {

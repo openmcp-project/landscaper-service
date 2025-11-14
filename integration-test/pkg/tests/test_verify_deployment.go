@@ -16,14 +16,15 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
 	cliutil "github.com/gardener/landscapercli/pkg/util"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	lsinstallation "github.com/gardener/landscaper-service/pkg/apis/installation"
-	"github.com/gardener/landscaper-service/test/integration/pkg/test"
-	"github.com/gardener/landscaper-service/test/integration/pkg/util"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	lsinstallation "github.com/openmcp-project/landscaper-service/pkg/apis/installation"
+
+	"github.com/openmcp-project/landscaper-service/test/integration/pkg/test"
+	"github.com/openmcp-project/landscaper-service/test/integration/pkg/util"
 )
 
 type VerifyDeploymentRunner struct {

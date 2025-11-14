@@ -21,7 +21,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/webhook/admission"
 
-	"github.com/gardener/landscaper-service/test/utils/envtest"
+	"github.com/openmcp-project/landscaper-service/test/utils/envtest"
 )
 
 func TestWebHook(t *testing.T) {

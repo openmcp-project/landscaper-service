@@ -5,12 +5,12 @@
 package instances_test
 
 import (
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 
-	"github.com/gardener/landscaper-service/pkg/controllers/instances"
-	"github.com/gardener/landscaper-service/pkg/utils"
+	"github.com/openmcp-project/landscaper-service/pkg/controllers/instances"
+	"github.com/openmcp-project/landscaper-service/pkg/utils"
 )
 
 func createDummyInstallationSpec() *lsv1alpha1.InstallationSpec {

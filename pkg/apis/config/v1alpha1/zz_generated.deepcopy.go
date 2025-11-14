@@ -10,7 +10,7 @@
 package v1alpha1
 
 import (
-	corev1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
+	corev1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 	v1 "k8s.io/api/core/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 )

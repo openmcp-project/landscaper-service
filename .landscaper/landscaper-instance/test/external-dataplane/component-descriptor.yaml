@@ -1,6 +1,6 @@
 component:
   componentReferences: []
-  name: github.com/gardener/landscaper-service/landscaper-instance
+  name: github.com/openmcp-project/landscaper-service/landscaper-instance
   provider: internal
   repositoryContexts:
   - baseUrl: europe-docker.pkg.dev/sap-gcp-cp-k8s-stable-hub/development

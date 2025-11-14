@@ -7,9 +7,9 @@ package tests
 import (
 	"context"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
-	"github.com/gardener/landscaper-service/test/integration/pkg/test"
+	"github.com/openmcp-project/landscaper-service/test/integration/pkg/test"
 )
 
 // BaseTestRunner is the base struct for test runners.

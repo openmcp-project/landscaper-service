@@ -13,19 +13,19 @@ import (
 	. "github.com/onsi/gomega"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-	kutil "github.com/gardener/landscaper/controller-utils/pkg/kubernetes"
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	kutil "github.com/openmcp-project/landscaper/controller-utils/pkg/kubernetes"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	"github.com/gardener/landscaper-service/pkg/operation"
-	"github.com/gardener/landscaper-service/test/utils/envtest"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper-service/pkg/operation"
+	"github.com/openmcp-project/landscaper-service/test/utils/envtest"
 
-	healthwatcher "github.com/gardener/landscaper-service/pkg/controllers/healthwatcher"
-	testutils "github.com/gardener/landscaper-service/test/utils"
+	healthwatcher "github.com/openmcp-project/landscaper-service/pkg/controllers/healthwatcher"
+	testutils "github.com/openmcp-project/landscaper-service/test/utils"
 )
 
 type TestServiceTargetKubeClientExtractor struct{}

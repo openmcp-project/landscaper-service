@@ -12,21 +12,21 @@ import (
 	"text/template"
 	"time"
 
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
 	cliquickstart "github.com/gardener/landscapercli/cmd/quickstart"
 	cliutil "github.com/gardener/landscapercli/pkg/util"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 	corev1 "k8s.io/api/core/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 
-	"github.com/gardener/landscaper-service/test/integration/pkg/test"
-	"github.com/gardener/landscaper-service/test/integration/pkg/tests"
-	"github.com/gardener/landscaper-service/test/integration/pkg/util"
+	"github.com/openmcp-project/landscaper-service/test/integration/pkg/test"
+	"github.com/openmcp-project/landscaper-service/test/integration/pkg/tests"
+	"github.com/openmcp-project/landscaper-service/test/integration/pkg/util"
 )
 
 var (

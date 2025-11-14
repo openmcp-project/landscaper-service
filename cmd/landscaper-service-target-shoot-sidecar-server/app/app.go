@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"os"
 
-	lsinstall "github.com/gardener/landscaper/apis/core/install"
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	lsinstall "github.com/openmcp-project/landscaper/apis/core/install"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 	"github.com/spf13/cobra"
 	corev1 "k8s.io/api/core/v1"
 	rbacv1 "k8s.io/api/rbac/v1"
@@ -24,13 +24,13 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 	metricsserver "sigs.k8s.io/controller-runtime/pkg/metrics/server"
 
-	lssinstall "github.com/gardener/landscaper-service/pkg/apis/core/install"
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	"github.com/gardener/landscaper-service/pkg/controllers/namespaceregistration"
-	"github.com/gardener/landscaper-service/pkg/controllers/subjectsync"
-	"github.com/gardener/landscaper-service/pkg/crdmanager"
-	"github.com/gardener/landscaper-service/pkg/utils"
-	"github.com/gardener/landscaper-service/pkg/version"
+	lssinstall "github.com/openmcp-project/landscaper-service/pkg/apis/core/install"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper-service/pkg/controllers/namespaceregistration"
+	"github.com/openmcp-project/landscaper-service/pkg/controllers/subjectsync"
+	"github.com/openmcp-project/landscaper-service/pkg/crdmanager"
+	"github.com/openmcp-project/landscaper-service/pkg/utils"
+	"github.com/openmcp-project/landscaper-service/pkg/version"
 )
 
 // NewResourceClusterControllerCommand creates a new command for the landscaper service controller

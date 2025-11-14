@@ -15,14 +15,15 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
 	cdv2 "github.com/gardener/component-spec/bindings-go/apis/v2"
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
 	cliutil "github.com/gardener/landscapercli/pkg/util"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	lssutils "github.com/gardener/landscaper-service/pkg/utils"
-	"github.com/gardener/landscaper-service/test/integration/pkg/test"
-	"github.com/gardener/landscaper-service/test/integration/pkg/util"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	lssutils "github.com/openmcp-project/landscaper-service/pkg/utils"
+
+	"github.com/openmcp-project/landscaper-service/test/integration/pkg/test"
+	"github.com/openmcp-project/landscaper-service/test/integration/pkg/util"
 )
 
 const (

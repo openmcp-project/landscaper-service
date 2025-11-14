@@ -18,19 +18,19 @@ import (
 
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-	lsserrors "github.com/gardener/landscaper-service/pkg/apis/errors"
+	lsserrors "github.com/openmcp-project/landscaper-service/pkg/apis/errors"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	kutil "github.com/gardener/landscaper/controller-utils/pkg/kubernetes"
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	kutil "github.com/openmcp-project/landscaper/controller-utils/pkg/kubernetes"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	instancescontroller "github.com/gardener/landscaper-service/pkg/controllers/instances"
-	"github.com/gardener/landscaper-service/pkg/operation"
-	testutils "github.com/gardener/landscaper-service/test/utils"
-	"github.com/gardener/landscaper-service/test/utils/envtest"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	instancescontroller "github.com/openmcp-project/landscaper-service/pkg/controllers/instances"
+	"github.com/openmcp-project/landscaper-service/pkg/operation"
+	testutils "github.com/openmcp-project/landscaper-service/test/utils"
+	"github.com/openmcp-project/landscaper-service/test/utils/envtest"
 )
 
 func expectObjectDeleted(err error, obj client.Object) {

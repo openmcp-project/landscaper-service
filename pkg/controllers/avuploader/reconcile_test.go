@@ -10,12 +10,12 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	"github.com/gardener/landscaper-service/test/utils/envtest"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper-service/test/utils/envtest"
 
-	avuploader "github.com/gardener/landscaper-service/pkg/controllers/avuploader"
+	avuploader "github.com/openmcp-project/landscaper-service/pkg/controllers/avuploader"
 )
 
 var _ = Describe("Reconcile", func() {

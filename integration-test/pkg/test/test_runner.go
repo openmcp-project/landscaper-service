@@ -8,13 +8,13 @@ import (
 	"context"
 	"fmt"
 
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 	"k8s.io/client-go/tools/clientcmd"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/gardener/landscaper-service/test/integration/pkg/util"
+	"github.com/openmcp-project/landscaper-service/test/integration/pkg/util"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 )
 
 // SharedTestObjects holds objects that are shared between tests.

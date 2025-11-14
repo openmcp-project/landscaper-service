@@ -5,7 +5,7 @@
 package envtest
 
 import (
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
@@ -13,10 +13,10 @@ import (
 	kubernetescheme "k8s.io/client-go/kubernetes/scheme"
 	"sigs.k8s.io/controller-runtime/pkg/client/apiutil"
 
-	lscoreinstall "github.com/gardener/landscaper/apis/core/install"
+	lscoreinstall "github.com/openmcp-project/landscaper/apis/core/install"
 
-	lsscoreinstall "github.com/gardener/landscaper-service/pkg/apis/core/install"
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
+	lsscoreinstall "github.com/openmcp-project/landscaper-service/pkg/apis/core/install"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 )
 
 var (

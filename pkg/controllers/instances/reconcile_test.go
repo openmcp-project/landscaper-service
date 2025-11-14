@@ -22,19 +22,19 @@ import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/types"
 
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
-	kutil "github.com/gardener/landscaper/controller-utils/pkg/kubernetes"
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
+	kutil "github.com/openmcp-project/landscaper/controller-utils/pkg/kubernetes"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 
-	lssconfig "github.com/gardener/landscaper-service/pkg/apis/config/v1alpha1"
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	lsserrors "github.com/gardener/landscaper-service/pkg/apis/errors"
-	lsinstallation "github.com/gardener/landscaper-service/pkg/apis/installation"
-	instancescontroller "github.com/gardener/landscaper-service/pkg/controllers/instances"
-	"github.com/gardener/landscaper-service/pkg/operation"
-	"github.com/gardener/landscaper-service/pkg/utils"
-	testutils "github.com/gardener/landscaper-service/test/utils"
-	"github.com/gardener/landscaper-service/test/utils/envtest"
+	lssconfig "github.com/openmcp-project/landscaper-service/pkg/apis/config/v1alpha1"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	lsserrors "github.com/openmcp-project/landscaper-service/pkg/apis/errors"
+	lsinstallation "github.com/openmcp-project/landscaper-service/pkg/apis/installation"
+	instancescontroller "github.com/openmcp-project/landscaper-service/pkg/controllers/instances"
+	"github.com/openmcp-project/landscaper-service/pkg/operation"
+	"github.com/openmcp-project/landscaper-service/pkg/utils"
+	testutils "github.com/openmcp-project/landscaper-service/test/utils"
+	"github.com/openmcp-project/landscaper-service/test/utils/envtest"
 )
 
 var _ = Describe("Reconcile", func() {

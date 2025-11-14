@@ -12,9 +12,9 @@ import (
 
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-	lsv1alpha1 "github.com/gardener/landscaper/apis/core/v1alpha1"
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
-	lc "github.com/gardener/landscaper/controller-utils/pkg/logging/constants"
+	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
+	lc "github.com/openmcp-project/landscaper/controller-utils/pkg/logging/constants"
 
 	corev1 "k8s.io/api/core/v1"
 	rbacv1 "k8s.io/api/rbac/v1"
@@ -24,9 +24,9 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 
-	lssv1alpha1 "github.com/gardener/landscaper-service/pkg/apis/core/v1alpha1"
-	lsserrors "github.com/gardener/landscaper-service/pkg/apis/errors"
-	"github.com/gardener/landscaper-service/pkg/utils"
+	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
+	lsserrors "github.com/openmcp-project/landscaper-service/pkg/apis/errors"
+	"github.com/openmcp-project/landscaper-service/pkg/utils"
 )
 
 const (

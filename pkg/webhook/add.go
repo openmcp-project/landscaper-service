@@ -17,8 +17,8 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	ctrlwebhook "sigs.k8s.io/controller-runtime/pkg/webhook"
 
-	"github.com/gardener/landscaper/controller-utils/pkg/logging"
-	lc "github.com/gardener/landscaper/controller-utils/pkg/logging/constants"
+	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
+	lc "github.com/openmcp-project/landscaper/controller-utils/pkg/logging/constants"
 )
 
 // WebhookedResourceDefinition contains information about the resources that should be watched by the webhook

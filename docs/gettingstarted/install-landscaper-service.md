@@ -17,7 +17,7 @@ Please consult the [landscaper documentation](https://github.com/gardener/landsc
 
 ## Installation
 
-The landscaper service can be installed via a landscaper installation using the _landscaper-service-blueprint_ blueprint of the _github.com/gardener/landscaper-service_ component.
+The landscaper service can be installed via a landscaper installation using the _landscaper-service-blueprint_ blueprint of the _github.com/openmcp-project/landscaper-service_ component.
 
 ```
 
@@ -59,7 +59,7 @@ spec:
       repositoryContext:
         type: ociRegistry
         baseUrl: europe-docker.pkg.dev/sap-gcp-cp-k8s-stable-hub/development
-      componentName: github.com/gardener/landscaper-service
+      componentName: github.com/openmcp-project/landscaper-service
       version: v0.1.0
 
   blueprint:
@@ -119,5 +119,5 @@ landscaper-cli installations inspect -n laas-system
 
 ## Update Process
 
-The _github.com/gardener/landscaper-service_ component contains a component reference to the supported landscaper version.
+The _github.com/openmcp-project/landscaper-service_ component contains a component reference to the supported landscaper version.
 When the landscaper service controller is updated, all currently deployed landscaper instances will be automatically updated to the new supported version.

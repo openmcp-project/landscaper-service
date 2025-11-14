@@ -4,7 +4,7 @@
 
 package v1alpha1
 
-import "github.com/gardener/landscaper/apis/core/v1alpha1"
+import "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 
 // ShootConfiguration holds the configuration of a gardener shoot cluster.
 type ShootConfiguration struct {
