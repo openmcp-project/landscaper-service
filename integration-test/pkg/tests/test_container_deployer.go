@@ -15,10 +15,10 @@ import (
 	"k8s.io/apimachinery/pkg/util/json"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	cdv2 "github.com/gardener/component-spec/bindings-go/apis/v2"
 	cliutil "github.com/gardener/landscapercli/pkg/util"
 	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
+	cdv2 "github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go/apis/v2"
 
 	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 
