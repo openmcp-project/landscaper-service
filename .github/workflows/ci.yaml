@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    tags:
+      - v*
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest-8core
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6
+        with:
+          submodules: recursive
+
+      - name: Set up Go
+        uses: actions/setup-go@4dc6199c7b1a012772edbd06daecab0f50c9053c # v6
+        with:
+          go-version-file: go.mod
+
+      - name: make revendor
+        run: make revendor
+
+      - name: make build
+        run: make build
+
+      - name: make verify
+        run: make verify
+
+      - name: make test
+        run: make test
