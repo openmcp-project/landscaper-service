@@ -7,24 +7,22 @@ SPDX-License-Identifier: Apache-2.0
 # Installation and configuration of the Landscaper Service
 
 This document describes the installation of the landscaper service.
-Landscaper service is a Kubernetes controller that reconciles [landscaper](https://github.com/gardener/landscaper) deployments as a service.
+Landscaper service is a Kubernetes controller that reconciles [landscaper](https://github.com/openmcp-project/landscaper) deployments as a service.
 
 ## Prerequisites
 
 For the landscaper service to work, a landscaper needs to be deployed on the same cluster as the landscaper service.
-Please consult the [landscaper documentation](https://github.com/gardener/landscaper/tree/master/docs) on how to install the landscaper.
+Please consult the [landscaper documentation](https://github.com/openmcp-project/landscaper/tree/master/docs) on how to install the landscaper.
 
 
 ## Installation
 
 The landscaper service can be installed via a landscaper installation using the _landscaper-service-blueprint_ blueprint of the _github.com/openmcp-project/landscaper-service_ component.
 
-```
-
 
 ### Installation blueprint
 
-To install the landscaper service via a [landscaper installation](https://github.com/gardener/landscaper/blob/master/docs/usage/Installations.md), a [target resource](https://github.com/gardener/landscaper/blob/master/docs/technical/target_types.md) needs to be created.
+To install the landscaper service via a [landscaper installation](https://github.com/openmcp-project/landscaper/blob/master/docs/usage/Installations.md), a [target resource](https://github.com/openmcp-project/landscaper/blob/master/docs/technical/target_types.md) needs to be created.
 The target defines the kubernetes cluster on which the landscaper service is installed.
 
 ```yaml

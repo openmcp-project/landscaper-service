@@ -69,7 +69,7 @@ test-h97dx-mtklg              Succeeded                                 11m
 
 ```
 
-The installation status can also be inspected with the [landscaper-cli](https://github.com/gardener/landscapercli).
+The installation status can also be inspected with the [landscaper-cli](https://github.com/openmcp-project/landscapercli).
 
 ```sh
 landscaper-cli installations inspect -n laas-user test-h97dx-mtklg

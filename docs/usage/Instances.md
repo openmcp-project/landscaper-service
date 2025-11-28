@@ -8,7 +8,7 @@ SPDX-License-Identifier: Apache-2.0
 
 Instances are kubernetes resources that represent an instance of a [LandscaperDeployment](LandscaperDeployments.md) which has been scheduled on a specific [ServiceTargetConfig](ServiceTargetConfigs.md).
 Instances are not directly created by a user. Instances are created by the landscaper service controller out of a LandscaperDeployment when a matching ServiceTargetConfig has been found.
-For each Instance the landscaper service controller will create a [Target](https://github.com/gardener/landscaper/blob/master/docs/technical/target_types.md) and an [Installation](https://github.com/gardener/landscaper/blob/master/docs/usage/Installations.md).
+For each Instance the landscaper service controller will create a [Target](https://github.com/openmcp-project/landscaper/blob/master/docs/technical/target_types.md) and an [Installation](https://github.com/openmcp-project/landscaper/blob/master/docs/usage/Installations.md).
 
 ### Basic structure:
 
@@ -113,7 +113,7 @@ During the reconciliation the controller will update the deployed Landscaper to 
 ## Cluster Endpoint
 
 The `status.clusterEndpoint` field contains the API endpoint of the deployed Landscaper instance, i.e. it is used to
-create and maintain Landscaper [Installations](https://github.com/gardener/landscaper/blob/master/docs/usage/Installations.md), 
+create and maintain Landscaper [Installations](https://github.com/openmcp-project/landscaper/blob/master/docs/usage/Installations.md), 
 which are handled by the corresponding Landscaper instance.
 
 ## User Kubeconfig
