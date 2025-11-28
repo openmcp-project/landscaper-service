@@ -1,0 +1,16 @@
+version: 3
+
+includes:
+  shared:
+    taskfile: hack/common/Taskfile_controller.yaml
+    flatten: true
+    excludes: [] # put task names in here which are overwritten in this file
+    vars:
+      NESTED_MODULES: integration-test
+#     API_DIRS: '{{.ROOT_DIR}}/api/core/v1alpha1/...'
+#     MANIFEST_OUT: '{{.ROOT_DIR}}/api/crds/manifests'
+      CODE_DIRS: '{{.ROOT_DIR}}/cmd/... {{.ROOT_DIR}}/pkg/... {{.ROOT_DIR}}/integration-test/... {{.ROOT_DIR}}/test/...'
+      COMPONENTS: 'landscaper-service landscaper-service-target-shoot-sidecar-server sidecar-rbac'
+      REPO_NAME: 'https://github.com/openmcp-project/landscaper-service'
+      GENERATE_DOCS_INDEX: "true"
+      CHART_COMPONENTS: "[]"
