@@ -12,10 +12,10 @@ import (
 	"text/template"
 	"time"
 
-	cliquickstart "github.com/gardener/landscapercli/cmd/quickstart"
-	cliutil "github.com/gardener/landscapercli/pkg/util"
 	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
+	cliquickstart "github.com/openmcp-project/landscapercli/cmd/quickstart"
+	cliutil "github.com/openmcp-project/landscapercli/pkg/util"
 	corev1 "k8s.io/api/core/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

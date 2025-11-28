@@ -105,7 +105,7 @@ kubectl apply -n laas-system -f installation.yaml
 ```
 
 Once the installation has been created, the landscaper will perform the necessary steps to perform the deployment of the landscaper service.
-The status of the installation can be inspected with the [landscaper-cli](https://github.com/gardener/landscapercli).
+The status of the installation can be inspected with the [landscaper-cli](https://github.com/openmcp-project/landscapercli).
 
 ```sh
 landscaper-cli installations inspect -n laas-system

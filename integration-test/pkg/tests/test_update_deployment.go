@@ -17,8 +17,8 @@ import (
 
 	"k8s.io/apimachinery/pkg/types"
 
-	cliutil "github.com/gardener/landscapercli/pkg/util"
 	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
+	cliutil "github.com/openmcp-project/landscapercli/pkg/util"
 
 	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 

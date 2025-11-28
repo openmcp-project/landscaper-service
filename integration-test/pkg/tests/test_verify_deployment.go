@@ -16,9 +16,9 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	cliutil "github.com/gardener/landscapercli/pkg/util"
 	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
+	cliutil "github.com/openmcp-project/landscapercli/pkg/util"
 
 	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 	lsinstallation "github.com/openmcp-project/landscaper-service/pkg/apis/installation"
