@@ -30,12 +30,12 @@ import (
 	"k8s.io/client-go/util/jsonpath"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	cliinstallations "github.com/gardener/landscapercli/cmd/installations"
-	cliutil "github.com/gardener/landscapercli/pkg/util"
 	lsv1alpha1 "github.com/openmcp-project/landscaper/apis/core/v1alpha1"
 	"github.com/openmcp-project/landscaper/apis/core/v1alpha1/targettypes"
 	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
 	lc "github.com/openmcp-project/landscaper/controller-utils/pkg/logging/constants"
+	cliinstallations "github.com/openmcp-project/landscapercli/cmd/installations"
+	cliutil "github.com/openmcp-project/landscapercli/pkg/util"
 
 	lssv1alpha1 "github.com/openmcp-project/landscaper-service/pkg/apis/core/v1alpha1"
 )

@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"strings"
 
-	cliutil "github.com/gardener/landscapercli/pkg/util"
 	"github.com/openmcp-project/landscaper/controller-utils/pkg/logging"
+	cliutil "github.com/openmcp-project/landscapercli/pkg/util"
 	corev1 "k8s.io/api/core/v1"
 	rbacv1 "k8s.io/api/rbac/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"

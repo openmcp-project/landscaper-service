@@ -8,7 +8,7 @@ import (
 	"context"
 	"fmt"
 
-	cliutil "github.com/gardener/landscapercli/pkg/util"
+	cliutil "github.com/openmcp-project/landscapercli/pkg/util"
 	corev1 "k8s.io/api/core/v1"
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/types"

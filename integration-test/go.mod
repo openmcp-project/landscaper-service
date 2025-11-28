@@ -3,11 +3,11 @@ module github.com/openmcp-project/landscaper-service/test/integration
 go 1.25.4
 
 require (
-	github.com/gardener/landscapercli v0.55.0
 	github.com/openmcp-project/landscaper-service v0.0.0-00010101000000-000000000000
 	github.com/openmcp-project/landscaper/apis v1.0.2
 	github.com/openmcp-project/landscaper/controller-utils v1.0.2
 	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.0.2
+	github.com/openmcp-project/landscapercli v1.0.0
 	k8s.io/api v0.34.2
 	k8s.io/apimachinery v0.34.2
 	k8s.io/client-go v0.34.2
@@ -130,6 +130,7 @@ require (
 	github.com/docker/distribution v2.8.3+incompatible // indirect
 	github.com/docker/docker v28.3.3+incompatible // indirect
 	github.com/docker/docker-credential-helpers v0.9.3 // indirect
+	github.com/docker/go v1.5.1-1.0.20160303222718-d30aec9fd63c // indirect
 	github.com/docker/go-connections v0.6.0 // indirect
 	github.com/docker/go-units v0.5.0 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
@@ -148,9 +149,6 @@ require (
 	github.com/fvbommel/sortorder v1.1.0 // indirect
 	github.com/fxamacker/cbor/v2 v2.9.0 // indirect
 	github.com/gardener/component-spec/bindings-go v0.0.98 // indirect
-	github.com/gardener/landscaper v0.144.0 // indirect
-	github.com/gardener/landscaper/apis v0.144.0 // indirect
-	github.com/gardener/landscaper/controller-utils v0.144.0 // indirect
 	github.com/ghodss/yaml v1.0.0 // indirect
 	github.com/globocom/go-buffer v1.2.2 // indirect
 	github.com/go-chi/chi v4.1.2+incompatible // indirect
@@ -270,6 +268,7 @@ require (
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/image-spec v1.1.1 // indirect
 	github.com/opencontainers/runtime-spec v1.2.1 // indirect
+	github.com/openmcp-project/landscaper v1.0.0 // indirect
 	github.com/opentracing/opentracing-go v1.2.0 // indirect
 	github.com/pborman/uuid v1.2.1 // indirect
 	github.com/pelletier/go-toml/v2 v2.2.4 // indirect
