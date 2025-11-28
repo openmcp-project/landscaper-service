@@ -57,7 +57,7 @@ The `spec.purpose` field should contain the human-readable purpose of the Landsc
 
 The `spec.landscaperConfiguration` field contains the configuration of the Landscaper deployment.
 Configuration contains the list of the standard deployers that shall be deployed.
-For available deployers please check [this documentation](https://github.com/gardener/landscaper/tree/master/docs/deployer).
+For available deployers please check [this documentation](https://github.com/openmcp-project/landscaper/tree/master/docs/deployer).
 
 ## Oidc Config
 

@@ -27,7 +27,7 @@ The main units are:
 
 - Deploy-Pipeline: The Deploy-Pipeline installs the Central Landscaper as a Helm chart on the Core-Shoot-Cluster. The 
   Central Landscaper watches the Core-Shoot-Cluster for Landscaper 
-  [Installations](https://github.com/gardener/landscaper/blob/master/docs/usage/Installations.md) resources. The 
+  [Installations](https://github.com/openmcp-project/landscaper/blob/master/docs/usage/Installations.md) resources. The 
   Deploy-Pipeline creates an Installation resource in the Core-Shoot-Cluster to also install the LaaS component 
   in the Core-Shoot-Cluster. The LaaS component is responsible to install Landscaper instances for the customers 
   in the Target-Shoot-Cluster(s). 
@@ -82,9 +82,9 @@ For every customer there is a dedicated namespace on the Core-Shoot-Cluster. To 
 user/customer/operator creates a [LandscaperDeployment](../usage/LandscaperDeployments.md) custom resource in this 
 namespace. The LaaS instance in the Core-Shoot-Cluster watches for such custom resources and creates an 
 [Instance](../usage/Instances.md) custom resource for every LandscaperDeployment. For every Instance, the LaaS deploys an 
-[Installation](https://github.com/gardener/landscaper/blob/master/docs/usage/Installations.md) for a Landscaper Instance.
+[Installation](https://github.com/openmcp-project/landscaper/blob/master/docs/usage/Installations.md) for a Landscaper Instance.
 
-The LaaS furthermore creates two [Targets](https://github.com/gardener/landscaper/blob/master/docs/usage/Targets.md)
+The LaaS furthermore creates two [Targets](https://github.com/openmcp-project/landscaper/blob/master/docs/usage/Targets.md)
 as input for the Installation containing the credentials
 
 - for a Target-Shoot-Cluster. These credentials are fetched from one of the ServiceTargetConfig custom resources and 
@@ -99,7 +99,7 @@ The Central Landscaper watches for the Installations and executes them.
 
 A Landscaper Instance is defined by [this](../../.landscaper/landscaper-instance) component. The component 
 contains a [blueprint](../../.landscaper/landscaper-instance/blueprint/installation/blueprint.yaml) with five 
-[sub installations](https://github.com/gardener/landscaper/blob/master/docs/usage/Blueprints.md#nested-installations), 
+[sub installations](https://github.com/openmcp-project/landscaper/blob/master/docs/usage/Blueprints.md#nested-installations), 
 which are deploying:
 
 - **[shoot](../../.landscaper/landscaper-instance/blueprint/installation/shoot-cluster-subinst.yaml)**: 

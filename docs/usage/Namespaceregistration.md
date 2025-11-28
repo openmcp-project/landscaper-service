@@ -56,7 +56,7 @@ strategies depending on the annotation `landscaper-service.gardener.cloud/on-del
 
 - **No annotation (default strategy)**:
   - All root Installations with a "delete-without-uninstall" annotation 
-    ([see](https://github.com/gardener/landscaper/blob/master/docs/usage/Annotations.md#delete-without-uninstall-annotation))
+    ([see](https://github.com/openmcp-project/landscaper/blob/master/docs/usage/Annotations.md#delete-without-uninstall-annotation))
     are deleted.
   - As long as there are still Installations in the namespace, the namespace is not deleted and this is written
     into the field `status.lastError` of the `NamespaceRegistration`. This also means, if there are still installations 
