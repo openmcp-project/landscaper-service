@@ -6,7 +6,7 @@ REPO_ROOT                                      := $(shell dirname $(realpath $(l
 VERSION                                        := $(shell cat $(REPO_ROOT)/VERSION)
 EFFECTIVE_VERSION                              := $(shell $(REPO_ROOT)/hack/get-version.sh)
 
-REGISTRY                                       := europe-docker.pkg.dev/sap-gcp-cp-k8s-stable-hub/landscaper
+REGISTRY                                       := ghcr.io/openmcp-project/components
 
 CODE_DIRS := $(REPO_ROOT)/cmd/... $(REPO_ROOT)/pkg/... $(REPO_ROOT)/test/... $(REPO_ROOT)/integration-test/...
 
