@@ -4,9 +4,9 @@ go 1.25.4
 
 require (
 	github.com/openmcp-project/landscaper-service v0.0.0-00010101000000-000000000000
-	github.com/openmcp-project/landscaper/apis v1.0.2
-	github.com/openmcp-project/landscaper/controller-utils v1.0.2
-	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.0.2
+	github.com/openmcp-project/landscaper/apis v1.0.3
+	github.com/openmcp-project/landscaper/controller-utils v1.0.3
+	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.0.3
 	github.com/openmcp-project/landscapercli v1.0.0
 	k8s.io/api v0.34.2
 	k8s.io/apimachinery v0.34.2
