@@ -74,6 +74,10 @@ jobs:
         with:
           go-version-file: go.mod
 
+      - name: Setup OCM
+        id: setup_ocm
+        uses: open-component-model/ocm-setup-action@main
+
       - name: Build and Push OCM Component
         run: |
           make component
