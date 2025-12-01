@@ -78,10 +78,6 @@ jobs:
         id: setup_ocm
         uses: open-component-model/ocm-setup-action@main
 
-      - name: Build and Push OCM Component
-        run: |
-          make component
-
       - name: Build and Push Images
         run: |
           make docker-images

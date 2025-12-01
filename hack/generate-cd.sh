@@ -28,9 +28,6 @@ LANDSCAPER_SERVICE_CHART_PATH="${SOURCE_PATH}/charts/landscaper-service"
 SHOOT_SIDECAR_CHART_PATH="${SOURCE_PATH}/charts/landscaper-service-target-shoot-sidecar-server"
 SHOOT_SIDECAR_RBAC_CHART_PATH="${SOURCE_PATH}/charts/sidecar-rbac"
 
-echo "PATH: $PATH"
-echo "OCM: $(which ocm)"
-
 ocm add componentversions --create --file ${COMPONENT_ARCHIVE_PATH} ${SOURCE_PATH}/.landscaper/components.yaml \
   --settings ${SOURCE_PATH}/.landscaper/ocm-settings.yaml \
   -- VERSION=${EFFECTIVE_VERSION} \
