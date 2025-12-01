@@ -102,10 +102,7 @@ jobs:
           git config user.email "${{ env.AUTHOR_EMAIL }}"
           git add VERSION
           git add go.mod
-          git add controller-utils/go.mod
-          git add apis/go.mod
-          git add legacy-component-cli/go.mod
-          git add legacy-image-vector/go.mod
+          git add integration-test/go.mod
           
           git commit -m "chore(release): Update VERSION to ${{ env.version }}-dev"
           git push origin main
