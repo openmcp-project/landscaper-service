@@ -74,6 +74,10 @@ jobs:
         with:
           go-version-file: go.mod
 
+      - name: Build and Push OCM Component
+        run: |
+          make component
+
       - name: Build and Push Images
         run: |
           make docker-images
