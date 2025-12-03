@@ -7,5 +7,5 @@ name: landscaper-service-target-shoot-sidecar-server
 description: Helm chart for target-shoot sidecar server
 
 type: application
-version: v1.0.0
-appVersion: v1.0.0
+version: v1.0.1
+appVersion: v1.0.1

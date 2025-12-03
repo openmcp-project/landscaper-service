@@ -7,5 +7,5 @@ name: landscaper-service
 description: Helm chart for landscaper as a service
 
 type: application
-version: v1.0.0
-appVersion: v1.0.0
+version: v1.0.1
+appVersion: v1.0.1
