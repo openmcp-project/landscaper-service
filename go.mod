@@ -11,7 +11,7 @@ require (
 	github.com/openmcp-project/landscaper/controller-utils v1.0.3
 	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.0.3
 	github.com/pkg/errors v0.9.1
-	github.com/spf13/cobra v1.10.1
+	github.com/spf13/cobra v1.10.2
 	github.com/spf13/pflag v1.0.10
 	k8s.io/api v0.34.2
 	k8s.io/apimachinery v0.34.2
