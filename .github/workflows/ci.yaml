@@ -47,6 +47,11 @@ jobs:
         with:
           go-version-file: go.mod
 
+      - name: Install Task
+        uses: arduino/setup-task@v2
+        with:
+          version: 3.x
+
       # make verify alias check:
       - name: Verify
         run: |
