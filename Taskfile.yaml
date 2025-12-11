@@ -6,10 +6,11 @@ includes:
     flatten: true
     excludes: [] # put task names in here which are overwritten in this file
     vars:
-      NESTED_MODULES: integration-test
+      # TODO: when to build the integration tests?    
+      # NESTED_MODULES: integration-test
 #     API_DIRS: '{{.ROOT_DIR}}/api/core/v1alpha1/...'
 #     MANIFEST_OUT: '{{.ROOT_DIR}}/api/crds/manifests'
-      CODE_DIRS: '{{.ROOT_DIR}}/cmd/... {{.ROOT_DIR}}/pkg/... {{.ROOT_DIR}}/integration-test/... {{.ROOT_DIR}}/test/...'
+      CODE_DIRS: '{{.ROOT_DIR}}/cmd/... {{.ROOT_DIR}}/pkg/... {{.ROOT_DIR}}/test/...' # {{.ROOT_DIR}}/integration-test/... 
       COMPONENTS: landscaper-service landscaper-service-target-shoot-sidecar-server sidecar-rbac
       # TODO: where to create docker image for integration-test
       REPO_NAME: 'https://github.com/openmcp-project/landscaper-service'
