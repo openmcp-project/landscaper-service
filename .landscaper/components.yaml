@@ -38,24 +38,24 @@ components:
         input:
           type: dockermulti
           variants:
-          - landscaper-service-controller:${VERSION}-linux-amd64
-          - landscaper-service-controller:${VERSION}-linux-arm64
+          - landscaper-service-controller:${VERSION}.linux-amd64
+          - landscaper-service-controller:${VERSION}.linux-arm64
           repository: images/landscaper-service-controller
       - name: landscaper-service-webhooks-server
         type: ociImage
         input:
           type: dockermulti
           variants:
-          - landscaper-service-webhooks-server:${VERSION}-linux-amd64
-          - landscaper-service-webhooks-server:${VERSION}-linux-arm64
+          - landscaper-service-webhooks-server:${VERSION}.linux-amd64
+          - landscaper-service-webhooks-server:${VERSION}.linux-arm64
           repository: images/landscaper-service-webhooks-server
       - name: landscaper-service-target-shoot-sidecar-server
         type: ociImage
         input:
           type: dockermulti
           variants:
-          - landscaper-service-target-shoot-sidecar-server:${VERSION}-linux-amd64
-          - landscaper-service-target-shoot-sidecar-server:${VERSION}-linux-arm64
+          - landscaper-service-target-shoot-sidecar-server:${VERSION}.linux-amd64
+          - landscaper-service-target-shoot-sidecar-server:${VERSION}.linux-arm64
           repository: images/landscaper-service-target-shoot-sidecar-server
 
   - name: github.com/openmcp-project/landscaper-service/landscaper-instance
@@ -142,8 +142,8 @@ components:
         input:
           type: dockermulti
           variants:
-          - landscaper-service-target-shoot-sidecar-server:${VERSION}-linux-amd64
-          - landscaper-service-target-shoot-sidecar-server:${VERSION}-linux-arm64
+          - landscaper-service-target-shoot-sidecar-server:${VERSION}.linux-amd64
+          - landscaper-service-target-shoot-sidecar-server:${VERSION}.linux-arm64
           repository: images/landscaper-service-target-shoot-sidecar-server
       - name: registry-config-definition
         type: landscaper.gardener.cloud/jsonschema
