@@ -20,9 +20,9 @@ for pf in ${PLATFORMS//,/ }; do
   echo "> Building docker images for $pf in version $EFFECTIVE_VERSION ..."
 	os=${pf%/*}
 	arch=${pf#*/}
-	docker buildx build --builder ${DOCKER_BUILDER_NAME} --load --build-arg EFFECTIVE_VERSION=${EFFECTIVE_VERSION} --platform ${pf} -t landscaper-service-controller:${EFFECTIVE_VERSION}-${os}-${arch} -f Dockerfile --target landscaper-service-controller "${PROJECT_ROOT}"
-	docker buildx build --builder ${DOCKER_BUILDER_NAME} --load --build-arg EFFECTIVE_VERSION=${EFFECTIVE_VERSION} --platform ${pf} -t landscaper-service-webhooks-server:${EFFECTIVE_VERSION}-${os}-${arch} -f Dockerfile --target landscaper-service-webhooks-server "${PROJECT_ROOT}"
-	docker buildx build --builder ${DOCKER_BUILDER_NAME} --load --build-arg EFFECTIVE_VERSION=${EFFECTIVE_VERSION} --platform ${pf} -t landscaper-service-target-shoot-sidecar-server:${EFFECTIVE_VERSION}-${os}-${arch} -f Dockerfile --target landscaper-service-target-shoot-sidecar-server "${PROJECT_ROOT}"
+	docker buildx build --builder ${DOCKER_BUILDER_NAME} --load --build-arg EFFECTIVE_VERSION=${EFFECTIVE_VERSION} --platform ${pf} -t landscaper-service-controller:${EFFECTIVE_VERSION}.${os}-${arch} -f Dockerfile --target landscaper-service-controller "${PROJECT_ROOT}"
+	docker buildx build --builder ${DOCKER_BUILDER_NAME} --load --build-arg EFFECTIVE_VERSION=${EFFECTIVE_VERSION} --platform ${pf} -t landscaper-service-webhooks-server:${EFFECTIVE_VERSION}.${os}-${arch} -f Dockerfile --target landscaper-service-webhooks-server "${PROJECT_ROOT}"
+	docker buildx build --builder ${DOCKER_BUILDER_NAME} --load --build-arg EFFECTIVE_VERSION=${EFFECTIVE_VERSION} --platform ${pf} -t landscaper-service-target-shoot-sidecar-server:${EFFECTIVE_VERSION}.${os}-${arch} -f Dockerfile --target landscaper-service-target-shoot-sidecar-server "${PROJECT_ROOT}"
 done
 
 docker buildx rm "$DOCKER_BUILDER_NAME"

@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 #### BASE ####
-FROM gcr.io/distroless/static-debian12:nonroot@sha256:2b7c93f6d6648c11f0e80a48558c8f77885eb0445213b8e69a6a0d7c89fc6ae4 as base
+FROM gcr.io/distroless/static-debian12:nonroot@sha256:2b7c93f6d6648c11f0e80a48558c8f77885eb0445213b8e69a6a0d7c89fc6ae4 AS base
 
 #### Landscaper Service controller ####
 FROM base AS landscaper-service-controller
@@ -11,7 +11,7 @@ FROM base AS landscaper-service-controller
 ARG TARGETOS
 ARG TARGETARCH
 WORKDIR /
-COPY bin/landscaper-service-controller-$TARGETOS.$TARGETARCH /landscaper-service-controller
+COPY bin/landscaper-service-controller.$TARGETOS-$TARGETARCH /landscaper-service-controller
 USER 65532:65532
 
 WORKDIR /
@@ -24,7 +24,7 @@ FROM base AS landscaper-service-webhooks-server
 ARG TARGETOS
 ARG TARGETARCH
 WORKDIR /
-COPY bin/landscaper-service-webhooks-server-$TARGETOS.$TARGETARCH /landscaper-service-webhooks-server
+COPY bin/landscaper-service-webhooks-server.$TARGETOS-$TARGETARCH /landscaper-service-webhooks-server
 USER 65532:65532
 
 WORKDIR /
@@ -37,7 +37,7 @@ FROM base AS landscaper-service-target-shoot-sidecar-server
 ARG TARGETOS
 ARG TARGETARCH
 WORKDIR /
-COPY bin/landscaper-service-target-shoot-sidecar-server-$TARGETOS.$TARGETARCH /landscaper-service-target-shoot-sidecar-server
+COPY bin/landscaper-service-target-shoot-sidecar-server.$TARGETOS-$TARGETARCH /landscaper-service-target-shoot-sidecar-server
 USER 65532:65532
 
 WORKDIR /

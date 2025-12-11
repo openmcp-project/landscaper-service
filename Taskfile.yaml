@@ -10,7 +10,11 @@ includes:
 #     API_DIRS: '{{.ROOT_DIR}}/api/core/v1alpha1/...'
 #     MANIFEST_OUT: '{{.ROOT_DIR}}/api/crds/manifests'
       CODE_DIRS: '{{.ROOT_DIR}}/cmd/... {{.ROOT_DIR}}/pkg/... {{.ROOT_DIR}}/integration-test/... {{.ROOT_DIR}}/test/...'
-      COMPONENTS: 'landscaper-service landscaper-service-target-shoot-sidecar-server sidecar-rbac'
+      COMPONENTS: landscaper-service landscaper-service-target-shoot-sidecar-server sidecar-rbac
+      # TODO: where to create docker image for integration-test
       REPO_NAME: 'https://github.com/openmcp-project/landscaper-service'
       GENERATE_DOCS_INDEX: "true"
       CHART_COMPONENTS: "[]"
+      OS: [linux]
+      ARCH: [amd64, arm64]
+

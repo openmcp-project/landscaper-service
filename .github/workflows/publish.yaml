@@ -74,6 +74,11 @@ jobs:
         with:
           go-version-file: go.mod
 
+      - name: Install Task
+        uses: arduino/setup-task@v2
+        with:
+          version: 3.x
+
       - name: Setup OCM
         id: setup_ocm
         uses: open-component-model/ocm-setup-action@main
