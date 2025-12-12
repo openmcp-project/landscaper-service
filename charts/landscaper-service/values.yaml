@@ -20,9 +20,8 @@ landscaperservice:
     # the repository context for the landscaper service component
     repositoryContext:
       type: ociRegistry
-      baseUrl: "europe-docker.pkg.dev"
-      subPath: "sap-gcp-cp-k8s-stable-hub/landscaper"
-
+      baseUrl: "ghcr.io"
+      subPath: "openmcp-project/github.com/openmcp-project/landscaper"
     # optional list of secret references { name, namespace }
     # secrets need to be in the docker credentials format: see https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
     registryPullSecrets: []
@@ -63,7 +62,7 @@ controller:
 
   replicaCount: 1
   image:
-    repository: europe-docker.pkg.dev/sap-gcp-cp-k8s-stable-hub/landscaper/github.com/gardener/landscaper-service/images/landscaper-service-controller
+    repository: ghcr.io/openmcp-project/components/github.com/openmcp-project/landscaper-service/images/landscaper-service-controller
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the .Values.image.tag or chart appVersion.
     #tag: ""
@@ -74,7 +73,7 @@ webhooksServer:
 
   replicaCount: 1
   image:
-    repository: europe-docker.pkg.dev/sap-gcp-cp-k8s-stable-hub/landscaper/github.com/gardener/landscaper-service/images/landscaper-service-webhooks-server
+    repository: ghcr.io/openmcp-project/components/github.com/openmcp-project/landscaper-service/images/landscaper-service-webhooks-server
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the .Values.image.tag or the chart appVersion.
     #tag: ""

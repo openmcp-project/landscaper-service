@@ -63,6 +63,9 @@ component: # ocm ## Builds and pushes the Component Descriptor. Also pushes the 
 .PHONY: build-resources ## Wrapper for 'make docker-images component'.
 build-resources: docker-images component
 
+# TODO: rethink this target and how to run integration tests
+# this build an image with necessary dependencies to run integration tests
+# and is used in the CI pipeline to run the tests, could be done in GH action without building an image
 .PHONY: build-int-test-image
 build-int-test-image:
 	- docker buildx create --name project-v3-builder

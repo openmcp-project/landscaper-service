@@ -4,15 +4,15 @@ SPDX-FileCopyrightText: 2022 "SAP SE or an SAP affiliate company and openmcp-pro
 SPDX-License-Identifier: Apache-2.0
 -->
 
-## Documentation Index
+# Documentation Index
 
-### Getting Started
+## Getting Started
 
 - [Install the landscaper service](./gettingstarted/install-landscaper-service.md)
 - [Configure service targets](./gettingstarted/configure-service-targets.md)
 - [Create a landscaper deployment](./gettingstarted/create-landscaper-deployment.md)
 
-### Usage
+## Usage
 
 - [ServiceTargetConfigs](./usage/ServiceTargetConfigs.md)
 - [LandscaperDeployments](./usage/LandscaperDeployments.md)

@@ -1,4 +1,4 @@
-# Landscaper as a Service (LaaS) Security 
+# Landscaper as a Service (LaaS) Security
 
 This document describes the security concepts of a LaaS landscape. The
 [architecture document](./architecture.md) is a prerequisite of the following description.
@@ -7,12 +7,12 @@ This document describes the security concepts of a LaaS landscape. The
 
 The different types of communication between the components of a LaaS landscape are as follows:
 
-- Pod to API server communication: Secured by mTLS by default 
-  ([see](https://kubernetes.io/docs/concepts/security/controlling-access/)). 
+- Pod to API server communication: Secured by mTLS by default
+  ([see](https://kubernetes.io/docs/concepts/security/controlling-access/)).
 
 - API server/Admission Controller to component communication: When a dynamic webhook is configured
-  ([see](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/)) the communication 
-  is also based on mTLS (self-signed certificates) and the component endpoint called by the API server/Admission 
+  ([see](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/)) the communication
+  is also based on mTLS (self-signed certificates) and the component endpoint called by the API server/Admission
   Controller is exposed by a load balancer which is not terminating TLS.
 
 The following image shows all communication channels of a LaaS landscape.
@@ -25,19 +25,19 @@ In the following the different channels are described in more detail:
   Installations, Executions, Pods, etc. via the API server of the Core-Shoot-Cluster.
 
 - access 2 (API server/Admission Controller to component communication): The Landscaper-Webhook on the Core-Shoot-Cluster
-  is a dynamic webhook controlling the creation of Landscaper Installation manifests on the Core-Shoot-Cluster. 
+  is a dynamic webhook controlling the creation of Landscaper Installation manifests on the Core-Shoot-Cluster.
   It calls an endpoint of the Central-Landscaper.
 
 - access 3 (Pod to API server communication): The LaaS accesses and manipulates custom resources on the Core-Shoot-Cluster
-  like LandscaperDeployments, ServiceTargetConfigs, Installations, Targets etc. via the API server of the 
+  like LandscaperDeployments, ServiceTargetConfigs, Installations, Targets etc. via the API server of the
   Core-Shoot-Cluster.
 
-- access 4 (Pod to API server communication): The Central-Landscaper accesses and manipulates shoot custom resources and 
-  fetches token in the namespace of the Garden-Resource-Cluster-Project located on the Garden cluster, via the API 
+- access 4 (Pod to API server communication): The Central-Landscaper accesses and manipulates shoot custom resources and
+  fetches token in the namespace of the Garden-Resource-Cluster-Project located on the Garden cluster, via the API
   server of the Garden Cluster.
 
-- access 5 (Pod to API server communication): The LaaS accesses shoot custom resources of the Garden-Resource-Cluster-Project 
-  located on the Garden cluster, via the API server of the Garden Cluster. It requires the names of the existing shoot 
+- access 5 (Pod to API server communication): The LaaS accesses shoot custom resources of the Garden-Resource-Cluster-Project
+  located on the Garden cluster, via the API server of the Garden Cluster. It requires the names of the existing shoot
   clusters to infer a new one.
 
 - access 6 (Pod to API server communication): The Central-Landscaper accesses and manipulates kubernetes objects to
@@ -47,12 +47,12 @@ In the following the different channels are described in more detail:
 - access 7 (Pod to API server communication): The Central-Landscaper accesses and manipulates kubernetes objects to
   install service accounts and RBAC objects on the Resource-Shoot-Clusters via their API servers.
 
-- access 8 (Pod to API server communication): The Landscaper components on the Target-Shoot-Clusters access and 
+- access 8 (Pod to API server communication): The Landscaper components on the Target-Shoot-Clusters access and
   manipulate kubernetes objects like Secrets, Service Accounts, Pods, etc. via their API servers. It also  
   installs the deployer in the customer namespace on the Target-Shoot-Cluster.
 
-- access 9 (Pod to API server communication): The ls-service-target-shoot-sidecar-server components on the 
-  Target-Shoot-Clusters have the default access to kubernetes objects on their clusters via the corresponding API 
+- access 9 (Pod to API server communication): The ls-service-target-shoot-sidecar-server components on the
+  Target-Shoot-Clusters have the default access to kubernetes objects on their clusters via the corresponding API
   servers.
 
 - access 10 (Pod to API server communication): The Landscaper components on the Target-Shoot-Clusters access and
@@ -60,11 +60,11 @@ In the following the different channels are described in more detail:
   API servers.
 
 - access 11 (Pod to API server communication): The ls-service-target-shoot-sidecar-server components on the
-  Target-Shoot-Clusters manipulate kubernetes objects like namespaces, CRDs, SubjectLists etc. on the 
+  Target-Shoot-Clusters manipulate kubernetes objects like namespaces, CRDs, SubjectLists etc. on the
   Resource-Shoot-Clusters via their API servers.
 
-- access 12 (API server/Admission Controller to component communication): The Landscaper-Webhooks on the 
-  Resource-Shoot-Clusters are dynamic webhooks controlling the creation of Landscaper Installation manifests on the 
+- access 12 (API server/Admission Controller to component communication): The Landscaper-Webhooks on the
+  Resource-Shoot-Clusters are dynamic webhooks controlling the creation of Landscaper Installation manifests on the
   clusters. The calls endpoints of the corresponding Landscapers on the Target-Shoot-Clusters.
 
 ## Credentials and Credential Rotation for a Landscaper as a Service (LaaS) landscape
@@ -92,7 +92,8 @@ The following summarizes the base techniques to get access to Gardener projects 
 - Gardener-Service-Account-Kubeconfig: To access a Gardener project, you could download a kubeconfig for a
   Gardener-Service-Account with the help of the Gardener Dashboard. The lifetime of this kubeconfig is 90 days.
   As an alternative to get a token to access a Gardener Project you can use the [token request API](https://kubernetes.io/docs/reference/kubernetes-api/authentication-resources/token-request-v1/#TokenRequest):
-  ```
+
+  ``` bash
   kubectl create --kubeconfig=<path to kubeconfig for Gardener-Service-Account of the project with SAM role> \
     --raw "/api/v1/namespaces/garden-<garden-project-name>/serviceaccounts/<service-account-name>/token" \
     -f <(echo '{"spec":{"expirationSeconds": <some-duration>}}') \
@@ -227,16 +228,16 @@ The Installation to deploy the LaaS requires some credentials as input data:
 ### List of Credentials for Rotation
 
 - Manually rotated credentials in Secret Store
-    - Gardener-Service-Account-Kubeconfig for Gardener-LaaS-Project
-    - Gardener-Service-Account-Kubeconfig for Gardener-Resource-Cluster-Project
-    - Secret key for the GCP service account of the two GCP projects referenced by the shoot clusters
+  - Gardener-Service-Account-Kubeconfig for Gardener-LaaS-Project
+  - Gardener-Service-Account-Kubeconfig for Gardener-Resource-Cluster-Project
+  - Secret key for the GCP service account of the two GCP projects referenced by the shoot clusters
 
 - Automatically rotated by the Deploy-Pipeline
-    - Secrets containing the GCP secret keys in the Garden-Projects Gardener-LaaS-Project and
+  - Secrets containing the GCP secret keys in the Garden-Projects Gardener-LaaS-Project and
       Gardener-Resource-Cluster-Project referenced by shoot resources
-    - Credentials stored in the ServiceTargetConfigs
-    - Target used to install the LaaS
-    - Secret containing Gardener-Service-Account-Kubeconfigs for the Gardener-Resource-Cluster-Project provided as input
+  - Credentials stored in the ServiceTargetConfigs
+  - Target used to install the LaaS
+  - Secret containing Gardener-Service-Account-Kubeconfigs for the Gardener-Resource-Cluster-Project provided as input
       to the LaaS installation.
 
 ## 3 Questions and open points
