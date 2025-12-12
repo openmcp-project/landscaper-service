@@ -53,7 +53,7 @@ connections.
 The Deploy-Pipeline installs the Central Landscaper on the Core-Shoot-Cluster as a helm chart deployment. The central 
 Landscaper watches the Core-Shoot-Cluster for Landscaper Installations. Since the host and resource cluster of the 
 Core Landscaper are equal, we can install it by deploying the 
-[bundled `landscaper` helm chart](https://github.com/gardener/landscaper/tree/master/charts/landscaper) 
+[bundled `landscaper` helm chart](https://github.com/openmcp-project/landscaper/tree/master/charts/landscaper) 
 with its two sub charts `landscaper-rbac` and `landscaper-controller`:
 - The `landscaper-rbac` helm chart deploys the ServiceAccounts used by the Landscaper controller internally, for
   watching Installations, and for creating the ValidatingWebhookConfig.
@@ -61,7 +61,7 @@ with its two sub charts `landscaper-rbac` and `landscaper-controller`:
 
 Then the Deploy-Pipeline creates an Installation (and Target etc.) for the [LaaS component](../../.landscaper), such 
 that the Central Landscaper installs it also on the Core-Shoot-Cluster. The LaaS component has the name 
-*github.com/gardener/landscaper/landscaper-service* and comprises the following important parts:
+*github.com/openmcp-project/landscaper/landscaper-service* and comprises the following important parts:
 
 - [blueprint](../../.landscaper/blueprint/blueprint.yaml)
 - [resources](../../.landscaper/resources.yaml)

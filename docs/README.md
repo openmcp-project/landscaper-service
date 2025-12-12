@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2022 "SAP SE or an SAP affiliate company and Gardener contributors"
+SPDX-FileCopyrightText: 2022 "SAP SE or an SAP affiliate company and openmcp-project contributors"
 
 SPDX-License-Identifier: Apache-2.0
 -->

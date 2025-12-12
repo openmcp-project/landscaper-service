@@ -9,4 +9,4 @@ To automate dependency updates, we use [Renovate Bot](https://docs.renovatebot.c
 
 Renovate can be configured via a `renovate.json` file in the repository, for all the different places where we reference or make usage of Free & Open Source Software.
 
-Renovate provides a [Dependency Dashboard](https://github.com/gardener/landscaper-service/issues/328) where you can find details of configuration and open pull requests.
+Renovate provides a [Dependency Dashboard](https://github.com/openmcp-project/landscaper-service/issues/328) where you can find details of configuration and open pull requests.

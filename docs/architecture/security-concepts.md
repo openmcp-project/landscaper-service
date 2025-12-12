@@ -176,7 +176,7 @@ that the token in the kubeconfigs must be rotated with every deployment.
 **Credentials when deploying the Central Landscaper:** The Helm deployment of the Central Landscaper is executed by the
 Deploy-Pipeline with a Shoot-Cluster-Admin-Kubeconfig for the Core-Shoot-Cluster, which could be fetched as described before.
 We deploy the Central Landscaper via the
-[bundled `landscaper` helm chart](https://github.com/gardener/landscaper/tree/master/charts/landscaper).
+[bundled `landscaper` helm chart](https://github.com/openmcp-project/landscaper/tree/master/charts/landscaper).
 No kubeconfig is provided as Helm values for the resource and webhook cluster because this is the same as the host cluster.
 The landscaper deployment creates the corresponding ServiceAccount and mounts their token into the landscaper pod (see
 [ServiceAccount Admission Controller](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#serviceaccount-admission-controller)),
@@ -189,7 +189,7 @@ providing automatic token rotation.
 - a Secret containing the access information of the OCI registry containing the Component Descriptor of the LaaS, the
   container images etc.
 
-- a [Context](https://github.com/gardener/landscaper/blob/master/docs/usage/Context.md) object referencing the
+- a [Context](https://github.com/openmcp-project/landscaper/blob/master/docs/usage/Context.md) object referencing the
   secret with the access information of the OCI registry
 
 - a Secret containing the access information for the Garden-Resource-Cluster-Project

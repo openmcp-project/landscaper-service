@@ -28,7 +28,7 @@ ln -s "${KUBEBUILDER_ASSETS}" ${PROJECT_ROOT}/tmp/test/bin
 # TODO: The landscaper crd files used for testing are currently not exported via landscaper api module.
 #       To avoid adding the landscaper module, download the needed crd files directly.
 LANDSCAPER_APIS_VERSION=$(go list -m -mod=readonly -f {{.Version}}  github.com/openmcp-project/landscaper/apis)
-LANDSCAPER_CRD_URL="https://raw.githubusercontent.com/gardener/landscaper/${LANDSCAPER_APIS_VERSION}/pkg/landscaper/crdmanager/crdresources"
+LANDSCAPER_CRD_URL="https://raw.githubusercontent.com/openmcp-project/landscaper/${LANDSCAPER_APIS_VERSION}/pkg/landscaper/crdmanager/crdresources"
 LANDSCAPER_CRD_DIR="${PROJECT_ROOT}/tmp/landscapercrd"
 LANDSCAPER_CRDS="landscaper.gardener.cloud_installations.yaml landscaper.gardener.cloud_executions.yaml landscaper.gardener.cloud_deployitems.yaml landscaper.gardener.cloud_targetsyncs.yaml landscaper.gardener.cloud_targets.yaml landscaper.gardener.cloud_dataobjects.yaml landscaper.gardener.cloud_contexts.yaml landscaper.gardener.cloud_lshealthchecks.yaml"
 mkdir -p ${PROJECT_ROOT}/tmp/landscapercrd
