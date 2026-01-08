@@ -95,7 +95,7 @@ CONTROLLER_TOOLS_VERSION ?= v0.20.0
 # renovate: datasource=github-tags depName=golang/tools
 FORMATTER_VERSION ?= v0.40.0
 # renovate: datasource=github-releases depName=golangci/golangci-lint
-LINTER_VERSION ?= v2.7.2
+LINTER_VERSION ?= v2.8.0
 # renovate: datasource=github-releases depName=open-component-model/ocm
 OCM_VERSION ?= v0.34.2
 
