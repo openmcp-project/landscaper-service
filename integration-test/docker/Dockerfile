@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-FROM golang:1.25.6-alpine3.22@sha256:fa3380ab0d73b706e6b07d2a306a4dc68f20bfc1437a6a6c47c8f88fe4af6f75
+FROM golang:1.25.7-alpine3.22@sha256:6d579c9037c1921fbbd7216fefe7d207a142c6b7f24feea28942a20796998ad3
 
 RUN apk add --no-cache --no-progress \
     bash \
