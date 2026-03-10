@@ -31,6 +31,17 @@
   ],
   "packageRules": [
     {
+      "description": "Group all ingress-nginx updates together",
+      "matchDatasources": [
+        "docker",
+        "helm"
+      ],
+      "groupName": "ingress-nginx",
+      "matchPackageNames": [
+        "/^ingress-nginx/"
+      ]
+    },
+    {
       "matchManagers": [
         "gomod"
       ],
