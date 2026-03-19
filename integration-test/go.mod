@@ -8,9 +8,9 @@ require (
 	github.com/openmcp-project/landscaper/controller-utils v1.0.6
 	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.0.6
 	github.com/openmcp-project/landscapercli v1.0.3
-	k8s.io/api v0.35.2
-	k8s.io/apimachinery v0.35.2
-	k8s.io/client-go v0.35.2
+	k8s.io/api v0.35.3
+	k8s.io/apimachinery v0.35.3
+	k8s.io/client-go v0.35.3
 	sigs.k8s.io/controller-runtime v0.23.3
 )
 
@@ -361,7 +361,7 @@ require (
 	k8s.io/klog/v2 v2.130.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20260127142750-a19766b6e2d4 // indirect
 	k8s.io/kubectl v0.35.0 // indirect
-	k8s.io/utils v0.0.0-20260210185600-b8788abfbbc2 // indirect
+	k8s.io/utils v0.0.0-20260319190234-28399d86e0b5 // indirect
 	ocm.software/ocm v0.36.0 // indirect
 	oras.land/oras-go/v2 v2.6.0 // indirect
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730 // indirect
