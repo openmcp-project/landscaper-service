@@ -9,7 +9,7 @@ require (
 	github.com/onsi/gomega v1.39.1
 	github.com/openmcp-project/landscaper/apis v1.0.6
 	github.com/openmcp-project/landscaper/controller-utils v1.0.6
-	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.0.6
+	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.1.0
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/pflag v1.0.10

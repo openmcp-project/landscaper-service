@@ -6,7 +6,7 @@ require (
 	github.com/openmcp-project/landscaper-service v0.0.0-00010101000000-000000000000
 	github.com/openmcp-project/landscaper/apis v1.0.6
 	github.com/openmcp-project/landscaper/controller-utils v1.0.6
-	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.0.6
+	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.1.0
 	github.com/openmcp-project/landscapercli v1.0.3
 	k8s.io/api v0.35.3
 	k8s.io/apimachinery v0.35.3

@@ -760,8 +760,8 @@ github.com/openmcp-project/landscaper/controller-utils v1.0.6 h1:YanVlogCxfPcpye
 github.com/openmcp-project/landscaper/controller-utils v1.0.6/go.mod h1:OjseSeycmogy6c9vgG7I4XC9adE4LULtGUfnbGIl/BM=
 github.com/openmcp-project/landscaper/legacy-component-cli v1.0.6 h1:2EdKGLDWAIJ8l18nwl5U22iovBy4uKudnryftpFa9YA=
 github.com/openmcp-project/landscaper/legacy-component-cli v1.0.6/go.mod h1:05xTZgD7N0UjjnydtDGsHIt9Y3oI5jSQAj+smn81/m4=
-github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.0.6 h1:MC88801jKCy5X5/evzq8Qwfq6A6aNyQgb3kMzLVWytU=
-github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.0.6/go.mod h1:Ga7Dha9wYmqZKQSmua+MEmZdDq4o5dDn197sVZDrz3o=
+github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.1.0 h1:AhnuYZnCTqbLw6id2kggP/WReWPVw25JSV6uT3gt2LA=
+github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.1.0/go.mod h1:3USzIhESkByq25dHvBgaoKvAy+I3ZGmuggYgsVZF9b8=
 github.com/openmcp-project/landscapercli v1.0.3 h1:JljDGf+7VgqBGMWGXn9SlAXt54BObDbZKJ7TE0+gO/w=
 github.com/openmcp-project/landscapercli v1.0.3/go.mod h1:CDjbeE30IiGDnePXIqR2Rcgqmz8emyW1B5/7kTzoQ9M=
 github.com/pborman/uuid v1.2.1 h1:+ZZIw58t/ozdjRaXh/3awHfmWRbzYxJoAdNJxe/3pvw=
