@@ -6,4 +6,4 @@ INGRESS_NGINX_CHART_VERSION: 4.15.1
 # CAVEAT! helm chart version and image application version should be always in sync!
 # check https://artifacthub.io/packages/helm/ingress-nginx/ingress-nginx?modal=chart_versions
 # renovate: datasource=github-releases depName=ingress-nginx
-INGRESS_NGINX_IMAGE_VERSION: v1.15.0
+INGRESS_NGINX_IMAGE_VERSION: v1.15.1
