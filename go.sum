@@ -112,8 +112,8 @@ github.com/openmcp-project/landscaper/apis v1.1.0 h1:cUU01tyAun+oRJVDkJSJozwHTIv
 github.com/openmcp-project/landscaper/apis v1.1.0/go.mod h1:qamJSgYdYzyg98PG+P1WerctYUR7/OKKnJ7J9vxcjZQ=
 github.com/openmcp-project/landscaper/controller-utils v1.1.0 h1:XGYTqhw/Cir3yDjuucQyxwf2bfXfdNmPgeGVVYv2kgE=
 github.com/openmcp-project/landscaper/controller-utils v1.1.0/go.mod h1:epnaVLqJwZdxC/kw6Wc1lkmEBzyTgXT+HEvejyiiU10=
-github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.1.0 h1:AhnuYZnCTqbLw6id2kggP/WReWPVw25JSV6uT3gt2LA=
-github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.1.0/go.mod h1:3USzIhESkByq25dHvBgaoKvAy+I3ZGmuggYgsVZF9b8=
+github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.2.0 h1:ZTaWG9c8RthL8FyaO5qbNQi9i/w4h6t4KxhmSqjJBKY=
+github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.2.0/go.mod h1:XAklE5kloGrqnZXn5YY/jHzDJE0FoS5iKBY9gkTXRlQ=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
