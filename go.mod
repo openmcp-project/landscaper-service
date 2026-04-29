@@ -6,7 +6,7 @@ require (
 	github.com/go-logr/logr v1.4.3
 	github.com/google/uuid v1.6.0
 	github.com/onsi/ginkgo/v2 v2.28.1
-	github.com/onsi/gomega v1.39.1
+	github.com/onsi/gomega v1.40.0
 	github.com/openmcp-project/landscaper/apis v1.2.0
 	github.com/openmcp-project/landscaper/controller-utils v1.2.0
 	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.2.0
