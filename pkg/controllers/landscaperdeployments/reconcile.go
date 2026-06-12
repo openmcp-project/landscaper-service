@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2021 "SAP SE or an SAP affiliate company and Gardener contributors"
+// SPDX-FileCopyrightText: Copyright OpenControlPlane contributors.
 //
 // SPDX-License-Identifier: Apache-2.0
 
@@ -194,7 +194,7 @@ func (c *Controller) getVisibleServiceTargetConfigs(ctx context.Context) ([]lssv
 
 	serviceTargetConfigList := &lssv1alpha1.ServiceTargetConfigList{}
 	selectorBuilder := strings.Builder{}
-	selectorBuilder.WriteString(fmt.Sprintf("%s=true", lssv1alpha1.ServiceTargetConfigVisibleLabelName))
+	fmt.Fprintf(&selectorBuilder, "%s=true", lssv1alpha1.ServiceTargetConfigVisibleLabelName)
 
 	labelSelector, _ := labels.Parse(selectorBuilder.String())
 	listOptions := client.ListOptions{

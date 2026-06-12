@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2021 SAP SE or an SAP affiliate company and Gardener contributors
+# SPDX-FileCopyrightText: Copyright OpenControlPlane contributors.
 #
 # SPDX-License-Identifier: Apache-2.0
 
@@ -6,7 +6,7 @@ REPO_ROOT                                      := $(shell dirname $(realpath $(l
 VERSION                                        := $(shell cat $(REPO_ROOT)/VERSION)
 EFFECTIVE_VERSION                              := $(shell $(REPO_ROOT)/hack/get-version.sh)
 
-REGISTRY                                       := europe-docker.pkg.dev/sap-gcp-cp-k8s-stable-hub/landscaper
+REGISTRY                                       := ghcr.io/openmcp-project/components
 
 CODE_DIRS := $(REPO_ROOT)/cmd/... $(REPO_ROOT)/pkg/... $(REPO_ROOT)/test/... $(REPO_ROOT)/integration-test/...
 
@@ -57,12 +57,15 @@ docker-images: build ## Builds images for all controllers locally. The images ar
 	@PLATFORMS=$(PLATFORMS) $(REPO_ROOT)/hack/docker-build-multi.sh
 
 .PHONY: component
-component: ocm ## Builds and pushes the Component Descriptor. Also pushes the images and combines them into multi-platform images. Requires the docker images to have been built before.
+component: # ocm ## Builds and pushes the Component Descriptor. Also pushes the images and combines them into multi-platform images. Requires the docker images to have been built before.
 	@OCM=$(OCM) $(REPO_ROOT)/hack/generate-cd.sh $(REGISTRY)
 
 .PHONY: build-resources ## Wrapper for 'make docker-images component'.
 build-resources: docker-images component
 
+# TODO: rethink this target and how to run integration tests
+# this build an image with necessary dependencies to run integration tests
+# and is used in the CI pipeline to run the tests, could be done in GH action without building an image
 .PHONY: build-int-test-image
 build-int-test-image:
 	- docker buildx create --name project-v3-builder
@@ -88,13 +91,13 @@ OCM ?= $(LOCALBIN)/ocm
 ## Tool Versions
 CODE_GEN_VERSION ?= $(shell  $(REPO_ROOT)/hack/extract-module-version.sh k8s.io/code-generator)
 # renovate: datasource=github-releases depName=kubernetes-sigs/controller-tools
-CONTROLLER_TOOLS_VERSION ?= v0.19.0
+CONTROLLER_TOOLS_VERSION ?= v0.21.0
 # renovate: datasource=github-tags depName=golang/tools
-FORMATTER_VERSION ?= v0.39.0
+FORMATTER_VERSION ?= v0.45.0
 # renovate: datasource=github-releases depName=golangci/golangci-lint
-LINTER_VERSION ?= v2.6.2
+LINTER_VERSION ?= v2.12.2
 # renovate: datasource=github-releases depName=open-component-model/ocm
-OCM_VERSION ?= v0.33.0
+OCM_VERSION ?= v0.40.0
 
 .PHONY: localbin
 localbin: ## Creates the local bin folder, if it doesn't exist. Not meant to be called manually, used as requirement for the other tool commands.
@@ -129,5 +132,5 @@ golangci-lint: localbin ## Download golangci-lint locally if necessary. If wrong
 .PHONY: ocm
 ocm: localbin ## Install OCM CLI if necessary. If wrong version is installed, it will be overwritten.
 	@test -s $(OCM) && $(OCM) --version | grep -q $(subst v,,$(OCM_VERSION)) || \
-	( echo "Installing OCM tooling $(OCM_VERSION) ..."; \
+	( echo "Installing OCM tooling $(OCM_VERSION) into $(LOCALBIN) ..., PATH is: $(PATH)"; \
 	curl -sSfL https://ocm.software/install.sh | OCM_VERSION=$(subst v,,$(OCM_VERSION)) bash -s $(LOCALBIN) )

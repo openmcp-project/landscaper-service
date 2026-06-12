@@ -1,8 +1,8 @@
-# SPDX-FileCopyrightText: 2022 "SAP SE or an SAP affiliate company and Gardener contributors"
+# SPDX-FileCopyrightText: Copyright OpenControlPlane contributors.
 #
 # SPDX-License-Identifier: Apache-2.0
 
-FROM golang:1.25.4-alpine3.22@sha256:d3f0cf7723f3429e3f9ed846243970b20a2de7bae6a5b66fc5914e228d831bbb
+FROM golang:1.26.3-alpine3.22@sha256:be93003ee861b3b91b6ebcb22678524947e0cd786c2df3f32af520006b1e54f5
 
 RUN apk add --no-cache --no-progress \
     bash \

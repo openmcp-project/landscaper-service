@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create GitHub App token
-        uses: actions/create-github-app-token@7e473efe3cb98aa54f8d4bac15400b15fad77d94 # v2
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3
         id: app-token
         with:
           # required
@@ -23,7 +23,7 @@ jobs:
           private-key: ${{ secrets.OPENMCP_CI_APP_PRIVATE_KEY }}
 
       - name: Checkout code
-        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
         with:
           token: ${{ steps.app-token.outputs.token }}
           fetch-tags: true
@@ -83,7 +83,7 @@ jobs:
 
       - name: Create GitHub release
         if: ${{ env.SKIP != 'true' }}
-        uses: softprops/action-gh-release@5be0e66d93ac7ed76da52eca8bb058f665c3a5fe # v2
+        uses: softprops/action-gh-release@b4309332981a82ec1c5618f44dd2e27cc8bfbfda # v3
         with:
           tag_name: ${{ env.version }}
           name: Release ${{ env.version }}
@@ -102,10 +102,7 @@ jobs:
           git config user.email "${{ env.AUTHOR_EMAIL }}"
           git add VERSION
           git add go.mod
-          git add controller-utils/go.mod
-          git add apis/go.mod
-          git add legacy-component-cli/go.mod
-          git add legacy-image-vector/go.mod
+          git add integration-test/go.mod
           
           git commit -m "chore(release): Update VERSION to ${{ env.version }}-dev"
           git push origin main
