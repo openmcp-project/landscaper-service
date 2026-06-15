@@ -5,7 +5,7 @@ go 1.26.4
 require (
 	github.com/go-logr/logr v1.4.3
 	github.com/google/uuid v1.6.0
-	github.com/onsi/ginkgo/v2 v2.30.0
+	github.com/onsi/ginkgo/v2 v2.31.0
 	github.com/onsi/gomega v1.42.0
 	github.com/openmcp-project/landscaper/apis v1.2.2
 	github.com/openmcp-project/landscaper/controller-utils v1.2.2
