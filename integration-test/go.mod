@@ -8,15 +8,15 @@ require (
 	github.com/openmcp-project/landscaper/controller-utils v1.3.0
 	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.3.0
 	github.com/openmcp-project/landscapercli v1.1.0
-	k8s.io/api v0.36.2
-	k8s.io/apimachinery v0.36.2
-	k8s.io/client-go v0.36.2
+	k8s.io/api v0.36.3
+	k8s.io/apimachinery v0.36.3
+	k8s.io/client-go v0.36.3
 	sigs.k8s.io/controller-runtime v0.24.1
 )
 
 replace github.com/openmcp-project/landscaper-service => ../
 
-replace github.com/ThalesIgnite/crypto11 => github.com/ThalesGroup/crypto11 v1.6.2
+replace github.com/ThalesIgnite/crypto11 => github.com/ThalesGroup/crypto11 v1.6.8
 
 exclude github.com/imdario/mergo v1.0.0
 
