@@ -16,7 +16,8 @@ require (
 
 replace github.com/openmcp-project/landscaper-service => ../
 
-replace github.com/ThalesIgnite/crypto11 => github.com/ThalesGroup/crypto11 v1.6.8
+// The repository renamed from ThalesIgnite (and later ThalesGroup) to eclipse-keypont because the project was donated to the Eclipse Foundation.
+replace github.com/ThalesIgnite/crypto11 => github.com/eclipse-keypont/crypto11 v1.6.8
 
 exclude github.com/imdario/mergo v1.0.0
 
@@ -142,7 +143,7 @@ require (
 	github.com/go-git/go-git/v5 v5.18.0 // indirect
 	github.com/go-ini/ini v1.67.0 // indirect
 	github.com/go-jose/go-jose/v4 v4.1.4 // indirect
-	github.com/go-logr/logr v1.4.3 // indirect
+	github.com/go-logr/logr v1.4.4 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-logr/zapr v1.3.0 // indirect
 	github.com/go-ole/go-ole v1.3.0 // indirect
