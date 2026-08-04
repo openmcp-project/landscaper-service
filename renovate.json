@@ -193,7 +193,8 @@
       "customType": "regex",
       "description": "Gardenlinux in several yaml files",
       "managerFilePatterns": [
-        "/.landscaper/landscaper-instance/test/internal-dataplane/values-shoot.yaml/"
+        "/.landscaper/landscaper-instance/test/internal-dataplane/values-shoot.yaml/",
+        "/.landscaper/blueprint/shoot-config.json/"
       ],
       "matchStrings": [
         "gardenlinux\\s.*version:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
