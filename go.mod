@@ -7,9 +7,9 @@ require (
 	github.com/google/uuid v1.6.0
 	github.com/onsi/ginkgo/v2 v2.32.0
 	github.com/onsi/gomega v1.42.1
-	github.com/openmcp-project/landscaper/apis v1.3.1
-	github.com/openmcp-project/landscaper/controller-utils v1.3.1
-	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.3.1
+	github.com/openmcp-project/landscaper/apis v1.4.0
+	github.com/openmcp-project/landscaper/controller-utils v1.4.0
+	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.4.0
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/pflag v1.0.10
