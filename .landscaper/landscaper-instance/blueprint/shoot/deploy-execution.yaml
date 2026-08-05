@@ -167,7 +167,9 @@ deployItems:
                 pods: 100.96.0.0/11
                 nodes: 10.250.0.0/16
                 services: 100.64.0.0/13
-              cloudProfileName: {{ .imports.shootConfig.provider.type }}
+              cloudProfile:
+                kind: CloudProfile
+                name: {{ .imports.shootConfig.provider.type }}
               region: {{ .imports.shootConfig.region }}
               secretBindingName: null
               credentialsBindingName: {{ .imports.secretBindingName }}
