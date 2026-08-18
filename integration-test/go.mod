@@ -1,6 +1,6 @@
 module github.com/openmcp-project/landscaper-service/test/integration
 
-go 1.26.5
+go 1.26.6
 
 require (
 	github.com/openmcp-project/landscaper-service v1.3.2
