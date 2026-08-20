@@ -38,8 +38,7 @@
       "matchUpdateTypes": [
         "patch",
         "digest"
-      ],
-      "rebaseWhen": "auto"
+      ]
     },
     {
       "matchUpdateTypes": [
@@ -47,8 +46,7 @@
         "patch",
         "pin",
         "digest"
-      ],
-      "rebaseWhen": "auto"
+      ]
     },
     {
       "matchPackageNames": [
@@ -56,8 +54,7 @@
         "github.com/openmcp-project/landscaper/apis",
         "github.com/openmcp-project/landscaper/controller-utils"
       ],
-      "description": "Update references in go.mod, integration-test/go.mod and .landscaper/ocm-settings.yaml",
-      "rebaseWhen": "auto",
+      "description": "Update references in go.mod, integration-test/go.mod and .landscaper/ocm-settings.yaml"
       "automerge": true,
       "automergeType": "pr-comment",
       "automergeComment": "chore(deps): new Landscaper version references (automerge)",
