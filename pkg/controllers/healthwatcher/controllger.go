@@ -81,7 +81,8 @@ func (c *Controller) Reconcile(ctx context.Context, req reconcile.Request) (reco
 	if availabilityCollection.Generation == availabilityCollection.Status.ObservedGeneration &&
 		time.Since(availabilityCollection.Status.LastRun.Time) < c.Config().AvailabilityMonitoring.PeriodicCheckInterval.Duration {
 		logger.Debug("skip reconcile since spec has not changed and periodic check interval is not in time yet")
-		return reconcile.Result{Requeue: true}, nil
+		remaining := c.Config().AvailabilityMonitoring.PeriodicCheckInterval.Duration - time.Since(availabilityCollection.Status.LastRun.Time)
+		return reconcile.Result{RequeueAfter: remaining}, nil
 	}
 
 	//clean status
