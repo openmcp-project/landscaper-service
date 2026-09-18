@@ -191,7 +191,6 @@ func computeAutomaticReconcile(instance *lssv1alpha1.Instance, reconcileError er
 
 	if reconcileError == nil {
 		return reconcile.Result{
-			Requeue:      true,
 			RequeueAfter: reconcileInterval,
 		}, nil
 	} else {

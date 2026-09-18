@@ -64,7 +64,6 @@ func (c *Controller) handleDelete(ctx context.Context, instance *lssv1alpha1.Ins
 		// since this namespace is on a different cluster and there is no owner reference set,
 		// the retry has to be triggered manually
 		return reconcile.Result{
-			Requeue:      true,
 			RequeueAfter: targetClusterNamespaceDeletionRetryDuration,
 		}, nil
 	}
