@@ -8,9 +8,9 @@ require (
 	github.com/openmcp-project/landscaper/controller-utils v1.4.1
 	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.4.1
 	github.com/openmcp-project/landscapercli v1.1.0
-	k8s.io/api v0.37.0
-	k8s.io/apimachinery v0.37.0
-	k8s.io/client-go v0.37.0
+	k8s.io/api v0.37.1
+	k8s.io/apimachinery v0.37.1
+	k8s.io/client-go v0.37.1
 	sigs.k8s.io/controller-runtime v0.25.1
 )
 
