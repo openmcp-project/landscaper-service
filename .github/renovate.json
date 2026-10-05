@@ -134,7 +134,7 @@
       "depNameTemplate": "kubernetes/ingress-nginx",
       "datasourceTemplate": "helm",
       "packageNameTemplate": "ingress-nginx",
-      "registryUrlTemplate": "artifacthub.io/packages/helm"
+      "registryUrlTemplate": "https://artifacthub.io/packages/helm"
     },
     {
       "description": "Ingress Nginx image version",
