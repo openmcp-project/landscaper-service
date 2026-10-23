@@ -85,18 +85,13 @@ LOCALBIN ?= $(REPO_ROOT)/bin
 ## Tool Binaries
 CODE_GEN_SCRIPT ?= $(LOCALBIN)/kube_codegen.sh
 CONTROLLER_GEN ?= $(LOCALBIN)/controller-gen
-FORMATTER ?= $(LOCALBIN)/goimports
-LINTER ?= $(LOCALBIN)/golangci-lint
+
 OCM ?= $(LOCALBIN)/ocm
 
 ## Tool Versions
 CODE_GEN_VERSION ?= $(shell  $(REPO_ROOT)/hack/extract-module-version.sh k8s.io/code-generator)
 # renovate: datasource=github-releases depName=kubernetes-sigs/controller-tools
 CONTROLLER_TOOLS_VERSION ?= v0.22.0
-# renovate: datasource=github-tags depName=golang/tools
-FORMATTER_VERSION ?= v0.51.0
-# renovate: datasource=github-releases depName=golangci/golangci-lint
-LINTER_VERSION ?= v2.14.0
 # renovate: datasource=github-releases depName=open-component-model/ocm
 OCM_VERSION ?= v0.52.0
 
