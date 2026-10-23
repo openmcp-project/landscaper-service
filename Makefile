@@ -21,15 +21,16 @@ help: ## Display this help.
 
 .PHONY: revendor
 revendor: ## Runs 'go mod tidy' for all go modules in this repo.
-	@$(REPO_ROOT)/hack/revendor.sh
+	@task generate:tidy
 
 .PHONY: format
-format: goimports ## Runs the formatter.
-	@@FORMATTER=$(FORMATTER) $(REPO_ROOT)/hack/format.sh $(CODE_DIRS)
+format: ## Runs the formatter.
+	@task generate:format
 
 .PHONY: check
-check: golangci-lint goimports ## Runs linter, 'go vet', and checks if the formatter has been run.
-	@LINTER=$(LINTER) FORMATTER=$(FORMATTER) $(REPO_ROOT)/hack/check.sh --golangci-lint-config="$(REPO_ROOT)/.golangci.yaml" $(CODE_DIRS)
+check: ## Runs linter, 'go vet', and checks if the formatter has been run.
+	@task validate:lint
+	@task validate:vet
 
 .PHONY: verify
 verify: check ## Alias for 'make check'.
