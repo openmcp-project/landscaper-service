@@ -1,13 +1,13 @@
 module github.com/openmcp-project/landscaper-service/test/integration
 
-go 1.27.2
+go 1.27.3
 
 require (
 	github.com/openmcp-project/landscaper-service v1.3.2
 	github.com/openmcp-project/landscaper/apis v1.4.2
 	github.com/openmcp-project/landscaper/controller-utils v1.4.2
 	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.4.2
-	github.com/openmcp-project/landscapercli v1.1.0
+	github.com/openmcp-project/landscapercli v1.1.3
 	k8s.io/api v0.37.1
 	k8s.io/apimachinery v0.37.1
 	k8s.io/client-go v0.37.1
@@ -131,7 +131,7 @@ require (
 	github.com/fvbommel/sortorder v1.2.0 // indirect
 	github.com/fxamacker/cbor/v2 v2.9.4 // indirect
 	github.com/ghodss/yaml v1.0.0 // indirect
-	github.com/go-chi/chi/v5 v5.3.1 // indirect
+	github.com/go-chi/chi/v5 v5.4.0 // indirect
 	github.com/go-errors/errors v1.5.1 // indirect
 	github.com/go-git/gcfg v1.5.1-0.20230307220236-3a3c6141e376 // indirect
 	github.com/go-git/go-billy/v5 v5.9.1 // indirect

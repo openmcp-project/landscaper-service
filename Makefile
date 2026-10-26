@@ -91,9 +91,9 @@ OCM ?= $(LOCALBIN)/ocm
 ## Tool Versions
 CODE_GEN_VERSION ?= $(shell  $(REPO_ROOT)/hack/extract-module-version.sh k8s.io/code-generator)
 # renovate: datasource=github-releases depName=kubernetes-sigs/controller-tools
-CONTROLLER_TOOLS_VERSION ?= v0.22.0
+CONTROLLER_TOOLS_VERSION ?= v0.23.0
 # renovate: datasource=github-releases depName=open-component-model/ocm
-OCM_VERSION ?= v0.52.0
+OCM_VERSION ?= v0.53.0
 
 .PHONY: localbin
 localbin: ## Creates the local bin folder, if it doesn't exist. Not meant to be called manually, used as requirement for the other tool commands.
