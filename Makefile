@@ -21,15 +21,16 @@ help: ## Display this help.
 
 .PHONY: revendor
 revendor: ## Runs 'go mod tidy' for all go modules in this repo.
-	@$(REPO_ROOT)/hack/revendor.sh
+	@task generate:tidy
 
 .PHONY: format
-format: goimports ## Runs the formatter.
-	@@FORMATTER=$(FORMATTER) $(REPO_ROOT)/hack/format.sh $(CODE_DIRS)
+format: ## Runs the formatter.
+	@task generate:format
 
 .PHONY: check
-check: golangci-lint goimports ## Runs linter, 'go vet', and checks if the formatter has been run.
-	@LINTER=$(LINTER) FORMATTER=$(FORMATTER) $(REPO_ROOT)/hack/check.sh --golangci-lint-config="$(REPO_ROOT)/.golangci.yaml" $(CODE_DIRS)
+check: ## Runs linter, 'go vet', and checks if the formatter has been run.
+	@task validate:lint
+	@task validate:vet
 
 .PHONY: verify
 verify: check ## Alias for 'make check'.
@@ -84,18 +85,13 @@ LOCALBIN ?= $(REPO_ROOT)/bin
 ## Tool Binaries
 CODE_GEN_SCRIPT ?= $(LOCALBIN)/kube_codegen.sh
 CONTROLLER_GEN ?= $(LOCALBIN)/controller-gen
-FORMATTER ?= $(LOCALBIN)/goimports
-LINTER ?= $(LOCALBIN)/golangci-lint
+
 OCM ?= $(LOCALBIN)/ocm
 
 ## Tool Versions
 CODE_GEN_VERSION ?= $(shell  $(REPO_ROOT)/hack/extract-module-version.sh k8s.io/code-generator)
 # renovate: datasource=github-releases depName=kubernetes-sigs/controller-tools
 CONTROLLER_TOOLS_VERSION ?= v0.23.0
-# renovate: datasource=github-tags depName=golang/tools
-FORMATTER_VERSION ?= v0.52.0
-# renovate: datasource=github-releases depName=golangci/golangci-lint
-LINTER_VERSION ?= v2.15.0
 # renovate: datasource=github-releases depName=open-component-model/ocm
 OCM_VERSION ?= v0.53.0
 
