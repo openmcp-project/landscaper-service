@@ -1,4 +1,4 @@
-LANDSCAPER_VERSION: v1.4.2
+LANDSCAPER_VERSION: v1.4.3
 
 # ingress controller
 # renovate: datasource=helm depName=ingress-nginx registryUrl=https://artifacthub.io/packages/helm
