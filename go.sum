@@ -108,10 +108,10 @@ github.com/onsi/ginkgo/v2 v2.33.1 h1:62XfWJbEIjPSCSDYrsCPP/SHcmH7O0M8ne8zfqQ2iz4
 github.com/onsi/ginkgo/v2 v2.33.1/go.mod h1:+aXOY+vzZ5mu2iI2HpTZUPmM//oQfsNFX6gU9kNcA44=
 github.com/onsi/gomega v1.44.0 h1:eAiGl3Pw5jz5GQdDff0BcxYpAX1JxW8xD7mFUuwNfZQ=
 github.com/onsi/gomega v1.44.0/go.mod h1:e/C2HwaZ1DhvjzXXuFhcR7hY7Sh9pl7MmoWKEjzwcdA=
-github.com/openmcp-project/landscaper/apis v1.4.2 h1:j9BLyD7wO2+1DYI7L+vEvTA9Od4j/wi9UJ6Eb7tOkls=
-github.com/openmcp-project/landscaper/apis v1.4.2/go.mod h1:DfM3dlSaeafx5NURILvSDBMtYdVSgzMT1odyjb0lYXI=
-github.com/openmcp-project/landscaper/controller-utils v1.4.2 h1:ZsxDsowT+T/cXGy+iIRAMwbZNy7jcc2FIK7QaJp9d7k=
-github.com/openmcp-project/landscaper/controller-utils v1.4.2/go.mod h1:p/phflQ4/MPP4C9VL6usAAdzFkmu8XZSmtN8RME/UEU=
+github.com/openmcp-project/landscaper/apis v1.4.3 h1:avjlZoNqTRS71mwsnyUULb95sA63VTTIapxGIxzzbgI=
+github.com/openmcp-project/landscaper/apis v1.4.3/go.mod h1:1EvVQuqykvS1Syr3BINlXX0zEX6AIbySrj5Yuz5z0Tk=
+github.com/openmcp-project/landscaper/controller-utils v1.4.3 h1:Lgivzu9oqLAzQx7tSzqZqMZFt9tlf8Rd79tJE35QY20=
+github.com/openmcp-project/landscaper/controller-utils v1.4.3/go.mod h1:NXLTVlmlTS7aQTdHbzgscKDAVOccuoaSyO3vF+ONYeE=
 github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.4.3 h1:oz137uPahNoMW4i2oJ3d+UdFNZ6OqLSjWaqznHRjLns=
 github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.4.3/go.mod h1:KFNfCRKI3hD267AFHX9hVGS3C+WshRTx0wbwrj97GjY=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
