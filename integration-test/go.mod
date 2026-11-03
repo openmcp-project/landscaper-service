@@ -4,8 +4,8 @@ go 1.27.3
 
 require (
 	github.com/openmcp-project/landscaper-service v1.3.2
-	github.com/openmcp-project/landscaper/apis v1.4.3
-	github.com/openmcp-project/landscaper/controller-utils v1.4.3
+	github.com/openmcp-project/landscaper/apis v1.4.4
+	github.com/openmcp-project/landscaper/controller-utils v1.4.4
 	github.com/openmcp-project/landscaper/legacy-component-spec/bindings-go v1.4.4
 	github.com/openmcp-project/landscapercli v1.1.5
 	k8s.io/api v0.37.2
@@ -240,7 +240,7 @@ require (
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/image-spec v1.1.1 // indirect
 	github.com/opencontainers/runtime-spec v1.3.0 // indirect
-	github.com/openmcp-project/landscaper v1.4.3 // indirect
+	github.com/openmcp-project/landscaper v1.4.4 // indirect
 	github.com/pborman/uuid v1.2.1 // indirect
 	github.com/pelletier/go-toml/v2 v2.4.3 // indirect
 	github.com/peterbourgon/diskv v2.0.1+incompatible // indirect
