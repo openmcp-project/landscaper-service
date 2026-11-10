@@ -403,7 +403,7 @@ func (r *NamespaceregistrationSubjectSyncRunner) checkInitialSetup(deployment *l
 	}
 
 	if len(rolebinding.Subjects) != 0 {
-		return fmt.Errorf("initial rolebinding should be empty but contains %q subjects", len(rolebinding.Subjects))
+		return fmt.Errorf("initial rolebinding should be empty but contains %d subjects", len(rolebinding.Subjects))
 	}
 
 	logger.Info("check cluster role existance", "name", USER_CLUSTER_ROLE)
@@ -421,7 +421,7 @@ func (r *NamespaceregistrationSubjectSyncRunner) checkInitialSetup(deployment *l
 	}
 
 	if len(clusterRolebinding.Subjects) != 0 {
-		return fmt.Errorf("initial rolebinding should be empty but contains %q subjects", len(clusterRolebinding.Subjects))
+		return fmt.Errorf("initial rolebinding should be empty but contains %d subjects", len(clusterRolebinding.Subjects))
 	}
 
 	return nil
