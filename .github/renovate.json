@@ -143,7 +143,7 @@
         "/\\.landscaper/ocm-settings\\.yaml/"
       ],
       "matchStrings": [
-        "INGRESS_NGINX_IMAGE_VERSION:\\s*v(?<currentValue>\\S+)"
+        "INGRESS_NGINX_IMAGE_VERSION:\\s*(?<currentValue>\\S+)"
       ],
       "depNameTemplate": "k8s.gcr.io/ingress-nginx/controller",
       "datasourceTemplate": "docker"
