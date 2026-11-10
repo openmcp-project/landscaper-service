@@ -241,7 +241,7 @@ func (r *VerifyDeploymentRunner) verifyOIDCKubeconfig(instance *lssv1alpha1.Inst
 
 	for i, v := range corretArgs {
 		if authInfo.Exec.Args[i] != v {
-			return fmt.Errorf("args in user kubeconfig authinfo incorret at indext %q: expected %q", i, v)
+			return fmt.Errorf("args in user kubeconfig authinfo incorret at index %v: expected %v", i, v)
 		}
 	}
 	return nil
