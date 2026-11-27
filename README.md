@@ -20,6 +20,39 @@ Maintainenance and development of the Landscaper project will continue in the ht
 This doesn't affect any feature or functionality of the Landscaper project.
 OCI images and OCM components can be consumed directly from within this repository GitHub Container Registry.
 
+## Verifying a Release
+
+The images and the component versions are signed keyless with [Sigstore](https://www.sigstore.dev/) by the publish workflow, for the release tag `<version>`.
+
+Verify an image with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/). Replace `<image>` with `landscaper-service-controller`, `landscaper-service-webhooks-server` or `landscaper-service-target-shoot-sidecar-server`:
+
+```bash
+cosign verify \
+  --certificate-identity https://github.com/openmcp-project/landscaper-service/.github/workflows/publish.yaml@refs/tags/<version> \
+  --certificate-oidc-issuer https://token.actions.githubusercontent.com \
+  ghcr.io/openmcp-project/images/<image>:<version>
+```
+
+Verify a component version with the [OCM CLI](https://ocm.software). The expected signer goes into an OCM configuration file:
+
+```yaml
+# verify.yaml
+type: generic.config.ocm.software/v1
+configurations:
+  - type: signing.config.ocm.software/v1alpha1
+    signature: default
+    verifier:
+      type: SigstoreVerificationConfiguration/v1alpha1
+      certificateIdentity: https://github.com/openmcp-project/landscaper-service/.github/workflows/publish.yaml@refs/tags/<version>
+      certificateOIDCIssuer: https://token.actions.githubusercontent.com
+```
+
+```bash
+ocm verify cv --config verify.yaml ghcr.io/openmcp-project/components//github.com/openmcp-project/landscaper-service:<version>
+```
+
+The commands fail if the artifact is unsigned or was signed by anything other than that workflow for the tag `<version>`.
+
 ## Support, Feedback, Contributing
 
 This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/openmcp-project/landscaper-service/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](https://github.com/openmcp-project/.github/blob/main/CONTRIBUTING.md).
