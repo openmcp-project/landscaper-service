@@ -4,7 +4,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-# Builds and publishes the component versions of the landscaper-service.
+# Builds, signs and publishes the component versions of the landscaper-service.
 #
 # Environment:
 #   OCM              OCM CLI binary
@@ -62,6 +62,10 @@ COMPONENT_ARCHIVE_PATH="$(mktemp -d)/ctf"
   --constructor "$PROJECT_ROOT/.landscaper/components.yaml" \
   --working-directory "$PROJECT_ROOT" \
   --repository "ctf::$COMPONENT_ARCHIVE_PATH"
+
+for component in "${COMPONENTS[@]}"; do
+  "$OCM" sign cv --config "$OCM_CONFIG" "ctf::$COMPONENT_ARCHIVE_PATH//$component:$VERSION"
+done
 
 echo "> Transfer Component version ${VERSION} to ${TARGET}"
 for component in "${COMPONENTS[@]}"; do

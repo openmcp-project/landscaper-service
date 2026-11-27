@@ -6,7 +6,7 @@
 
 set -euo pipefail
 
-# Call with PUSH_IMAGES=true to push one multi-platform image per controller
+# Call with PUSH_IMAGES=true to push one multi-platform image per controller and sign it with cosign
 
 PROJECT_ROOT="$(realpath $(dirname $0)/..)"
 if [[ -z ${EFFECTIVE_VERSION:-} ]]; then
@@ -27,6 +27,8 @@ if [[ "${PUSH_IMAGES:-false}" == "true" ]]; then
       exit 1
     fi
     docker buildx build --builder ${DOCKER_BUILDER_NAME} --push --build-arg EFFECTIVE_VERSION=${EFFECTIVE_VERSION} --platform ${PLATFORMS} -t "$ref" -f Dockerfile --target ${img} "${PROJECT_ROOT}"
+    digest=$(docker buildx imagetools inspect "$ref" --format '{{.Manifest.Digest}}')
+    cosign sign --yes "${ref%:*}@${digest}"
   done
   docker buildx rm "$DOCKER_BUILDER_NAME"
   exit 0
