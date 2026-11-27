@@ -3,15 +3,6 @@ components:
     version: ${VERSION}
     provider:
       name: ${PROVIDER}
-    sources:
-      - name: main
-        type: git
-        version: ${VERSION}
-        access:
-          type: github
-          commit: ${COMMIT_SHA}
-          ref: refs/tags/${VERSION}
-          repoUrl: github.com/openmcp-project/landscaper-service
     componentReferences:
       - name: landscaper-instance
         componentName: github.com/openmcp-project/landscaper-service/landscaper-instance
@@ -20,164 +11,160 @@ components:
         componentName: github.com/openmcp-project/landscaper-service/ingress-controller
         version: ${VERSION}
     resources:
+      - name: source
+        type: blob
+        version: ${VERSION}
+        access:
+          type: Git/v1
+          commit: ${COMMIT_SHA}
+          ref: refs/tags/${VERSION}
+          repository: https://github.com/openmcp-project/landscaper-service
       - name: landscaper-service-blueprint
         type: landscaper.gardener.cloud/blueprint
         input:
-          type: dir
-          path: ./blueprint
+          type: Dir/v1
+          path: ./.landscaper/blueprint
           compress: true
           mediaType: application/vnd.gardener.landscaper.blueprint.layer.v1.tar+gzip
       - name: landscaper-service-chart
-        type: helm.io/chart
+        type: helmChart
         input:
-          type: helm
+          type: Helm/v1
           path: ${LANDSCAPER_SERVICE_CHART_PATH}
-          repository: charts/landscaper-service
       - name: landscaper-service-controller
         type: ociImage
-        input:
-          type: dockermulti
-          variants:
-          - landscaper-service-controller:${VERSION}.linux-amd64
-          - landscaper-service-controller:${VERSION}.linux-arm64
-          repository: images/landscaper-service-controller
+        version: ${VERSION}
+        access:
+          type: OCIImage/v1
+          imageReference: "${IMAGE_REGISTRY}/landscaper-service-controller:${VERSION}"
       - name: landscaper-service-webhooks-server
         type: ociImage
-        input:
-          type: dockermulti
-          variants:
-          - landscaper-service-webhooks-server:${VERSION}.linux-amd64
-          - landscaper-service-webhooks-server:${VERSION}.linux-arm64
-          repository: images/landscaper-service-webhooks-server
+        version: ${VERSION}
+        access:
+          type: OCIImage/v1
+          imageReference: "${IMAGE_REGISTRY}/landscaper-service-webhooks-server:${VERSION}"
       - name: landscaper-service-target-shoot-sidecar-server
         type: ociImage
-        input:
-          type: dockermulti
-          variants:
-          - landscaper-service-target-shoot-sidecar-server:${VERSION}.linux-amd64
-          - landscaper-service-target-shoot-sidecar-server:${VERSION}.linux-arm64
-          repository: images/landscaper-service-target-shoot-sidecar-server
+        version: ${VERSION}
+        access:
+          type: OCIImage/v1
+          imageReference: "${IMAGE_REGISTRY}/landscaper-service-target-shoot-sidecar-server:${VERSION}"
 
   - name: github.com/openmcp-project/landscaper-service/landscaper-instance
     version: ${VERSION}
     provider:
       name: ${PROVIDER}
-    sources:
-      - name: main
-        type: git
-        version: ${VERSION}
-        access:
-          type: github
-          commit: ${COMMIT_SHA}
-          ref: refs/tags/${VERSION}
-          repoUrl: github.com/openmcp-project/landscaper-service
     componentReferences:
       - name: landscaper
         componentName: github.com/openmcp-project/landscaper
         version: ${LANDSCAPER_VERSION}
     resources:
+      - name: source
+        type: blob
+        version: ${VERSION}
+        access:
+          type: Git/v1
+          commit: ${COMMIT_SHA}
+          ref: refs/tags/${VERSION}
+          repository: https://github.com/openmcp-project/landscaper-service
       - name: rbac-blueprint
         type: landscaper.gardener.cloud/blueprint
         input:
-          type: dir
-          path: ./landscaper-instance/blueprint/rbac
+          type: Dir/v1
+          path: ./.landscaper/landscaper-instance/blueprint/rbac
           compress: true
           mediaType: application/vnd.gardener.landscaper.blueprint.layer.v1.tar+gzip
       - name: landscaper-blueprint
         type: landscaper.gardener.cloud/blueprint
         input:
-          type: dir
-          path: ./landscaper-instance/blueprint/landscaper
+          type: Dir/v1
+          path: ./.landscaper/landscaper-instance/blueprint/landscaper
           compress: true
           mediaType: application/vnd.gardener.landscaper.blueprint.layer.v1.tar+gzip
       - name: shoot-blueprint
         type: landscaper.gardener.cloud/blueprint
         input:
-          type: dir
-          path: ./landscaper-instance/blueprint/shoot
+          type: Dir/v1
+          path: ./.landscaper/landscaper-instance/blueprint/shoot
           compress: true
           mediaType: application/vnd.gardener.landscaper.blueprint.layer.v1.tar+gzip
       - name: sidecar-blueprint
         type: landscaper.gardener.cloud/blueprint
         input:
-          type: dir
-          path: ./landscaper-instance/blueprint/ls-service-target-shoot-sidecar-server
+          type: Dir/v1
+          path: ./.landscaper/landscaper-instance/blueprint/ls-service-target-shoot-sidecar-server
           compress: true
           mediaType: application/vnd.gardener.landscaper.blueprint.layer.v1.tar+gzip
       - name: sidecar-rbac-blueprint
         type: landscaper.gardener.cloud/blueprint
         input:
-          type: dir
-          path: ./landscaper-instance/blueprint/sidecar-rbac
+          type: Dir/v1
+          path: ./.landscaper/landscaper-instance/blueprint/sidecar-rbac
           compress: true
           mediaType: application/vnd.gardener.landscaper.blueprint.layer.v1.tar+gzip
       - name: installation-blueprint
         type: landscaper.gardener.cloud/blueprint
         input:
-          type: dir
-          path: ./landscaper-instance/blueprint/installation
+          type: Dir/v1
+          path: ./.landscaper/landscaper-instance/blueprint/installation
           compress: true
           mediaType: application/vnd.gardener.landscaper.blueprint.layer.v1.tar+gzip
       - name: installation-blueprint-ext-dataplane
         type: landscaper.gardener.cloud/blueprint
         input:
-          type: dir
-          path: ./landscaper-instance/blueprint/installation-ext-dataplane
+          type: Dir/v1
+          path: ./.landscaper/landscaper-instance/blueprint/installation-ext-dataplane
           compress: true
           mediaType: application/vnd.gardener.landscaper.blueprint.layer.v1.tar+gzip
       - name: ls-service-target-shoot-sidecar-chart
-        type: helm.io/chart
+        type: helmChart
         input:
-          type: helm
+          type: Helm/v1
           path: ${SHOOT_SIDECAR_CHART_PATH}
-          repository: charts/shoot-sidecar
       - name: sidecar-rbac-chart
-        type: helm.io/chart
+        type: helmChart
         input:
-          type: helm
+          type: Helm/v1
           path: ${SHOOT_SIDECAR_RBAC_CHART_PATH}
-          repository: charts/shoot-sidecar-rbac
       - name: ls-service-target-shoot-sidecar-image
         type: ociImage
-        input:
-          type: dockermulti
-          variants:
-          - landscaper-service-target-shoot-sidecar-server:${VERSION}.linux-amd64
-          - landscaper-service-target-shoot-sidecar-server:${VERSION}.linux-arm64
-          repository: images/landscaper-service-target-shoot-sidecar-server
+        version: ${VERSION}
+        access:
+          type: OCIImage/v1
+          imageReference: "${IMAGE_REGISTRY}/landscaper-service-target-shoot-sidecar-server:${VERSION}"
       - name: registry-config-definition
         type: landscaper.gardener.cloud/jsonschema
         input:
-          type: file
-          path: ./landscaper-instance/definition/registry-configuration.json
+          type: File/v1
+          path: ./.landscaper/landscaper-instance/definition/registry-configuration.json
           compress: true
           mediaType: application/vnd.gardener.landscaper.jsonschema.layer.v1.json
       - name: landscaper-config-definition
         type: landscaper.gardener.cloud/jsonschema
         input:
-          type: file
-          path: ./landscaper-instance/definition/landscaper-configuration.json
+          type: File/v1
+          path: ./.landscaper/landscaper-instance/definition/landscaper-configuration.json
           compress: true
           mediaType: application/vnd.gardener.landscaper.jsonschema.layer.v1.json
       - name: shoot-config-definition
         type: landscaper.gardener.cloud/jsonschema
         input:
-          type: file
-          path: ./landscaper-instance/definition/shoot-configuration.json
+          type: File/v1
+          path: ./.landscaper/landscaper-instance/definition/shoot-configuration.json
           compress: true
           mediaType: application/vnd.gardener.landscaper.jsonschema.layer.v1.json
       - name: sidecar-config-definition
         type: landscaper.gardener.cloud/jsonschema
         input:
-          type: file
-          path: ./landscaper-instance/definition/sidecar-configuration.json
+          type: File/v1
+          path: ./.landscaper/landscaper-instance/definition/sidecar-configuration.json
           compress: true
           mediaType: application/vnd.gardener.landscaper.jsonschema.layer.v1.json
       - name: rotation-config-definition
         type: landscaper.gardener.cloud/jsonschema
         input:
-          type: file
-          path: ./landscaper-instance/definition/rotation-configuration.json
+          type: File/v1
+          path: ./.landscaper/landscaper-instance/definition/rotation-configuration.json
           compress: true
           mediaType: application/vnd.gardener.landscaper.jsonschema.layer.v1.json
 
@@ -185,36 +172,31 @@ components:
     version: ${VERSION}
     provider:
       name: ${PROVIDER}
-    sources:
-      - name: main
-        type: git
+    resources:
+      - name: source
+        type: blob
         version: ${VERSION}
         access:
-          type: github
+          type: Git/v1
           commit: ${COMMIT_SHA}
           ref: refs/tags/${VERSION}
-          repoUrl: github.com/openmcp-project/landscaper-service
-    resources:
+          repository: https://github.com/openmcp-project/landscaper-service
       - name: ingress-controller-blueprint
         type: landscaper.gardener.cloud/blueprint
         input:
-          type: dir
-          path: ./ingress-controller/blueprint
+          type: Dir/v1
+          path: ./.landscaper/ingress-controller/blueprint
           compress: true
           mediaType: application/vnd.gardener.landscaper.blueprint.layer.v1.tar+gzip
       - name: ingress-nginx-chart
-        type: helm.io/chart
+        type: helmChart
         version: ${INGRESS_NGINX_CHART_VERSION}
         input:
-          type: helm
-          helmRepository: https://kubernetes.github.io/ingress-nginx
-          path: ingress-nginx
-          version: ${INGRESS_NGINX_CHART_VERSION}
-          repository: charts/ingress-nginx
+          type: Helm/v1
+          helmRepository: "https://kubernetes.github.io/ingress-nginx/ingress-nginx:${INGRESS_NGINX_CHART_VERSION}"
       - name: ingress-nginx-controller
         type: ociImage
         version: ${INGRESS_NGINX_IMAGE_VERSION}
-        input:
-          type: ociArtifact
-          path: registry.k8s.io/ingress-nginx/controller:${INGRESS_NGINX_IMAGE_VERSION}
-          repository: images/ingress-nginx
+        access:
+          type: OCIImage/v1
+          imageReference: "registry.k8s.io/ingress-nginx/controller:${INGRESS_NGINX_IMAGE_VERSION}"

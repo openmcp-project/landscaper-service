@@ -79,13 +79,9 @@ jobs:
         with:
           version: 3.x
 
-      - name: Setup OCM
-        id: setup_ocm
-        uses: open-component-model/ocm-setup-action@5755dc5c01c939f7dbba3bb07f9fb9b019a7a2a0 # v1.1.0
-
-      - name: Build and Push Images
+      - name: Build adn Push Images
         run: |
-          make docker-images
+          make push-images
 
       - name: Build and Push OCM Component
         run: |

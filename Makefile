@@ -57,8 +57,12 @@ build: ## Build binaries for all os/arch combinations specified in PLATFORMS.
 docker-images: build ## Builds images for all controllers locally. The images are suffixed with -$OS-$ARCH
 	@PLATFORMS=$(PLATFORMS) $(REPO_ROOT)/hack/docker-build-multi.sh
 
+.PHONY: push-images
+push-images: build ## Builds multi-platform images for all controllers, pushes them and signs them with cosign.
+	@PLATFORMS=$(PLATFORMS) PUSH_IMAGES=true $(REPO_ROOT)/hack/docker-build-multi.sh
+
 .PHONY: component
-component: # ocm ## Builds and pushes the Component Descriptor. Also pushes the images and combines them into multi-platform images. Requires the docker images to have been built before.
+component: ocm ## Builds, signs and publishes the component versions. Requires push-images to have run before.
 	@OCM=$(OCM) $(REPO_ROOT)/hack/generate-cd.sh $(REGISTRY)
 
 .PHONY: build-resources ## Wrapper for 'make docker-images component'.
@@ -92,8 +96,10 @@ OCM ?= $(LOCALBIN)/ocm
 CODE_GEN_VERSION ?= $(shell  $(REPO_ROOT)/hack/extract-module-version.sh k8s.io/code-generator)
 # renovate: datasource=github-releases depName=kubernetes-sigs/controller-tools
 CONTROLLER_TOOLS_VERSION ?= v0.23.0
-# renovate: datasource=github-releases depName=open-component-model/ocm
-OCM_VERSION ?= v0.55.0
+# renovate: datasource=github-releases depName=open-component-model/open-component-model
+OCM_VERSION ?= v0.25.0
+OCM_OS ?= $(shell uname -s | tr '[:upper:]' '[:lower:]')
+OCM_ARCH ?= $(shell uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/')
 
 .PHONY: localbin
 localbin: ## Creates the local bin folder, if it doesn't exist. Not meant to be called manually, used as requirement for the other tool commands.
@@ -127,6 +133,6 @@ golangci-lint: localbin ## Download golangci-lint locally if necessary. If wrong
 
 .PHONY: ocm
 ocm: localbin ## Install OCM CLI if necessary. If wrong version is installed, it will be overwritten.
-	@test -s $(OCM) && $(OCM) --version | grep -q $(subst v,,$(OCM_VERSION)) || \
-	( echo "Installing OCM tooling $(OCM_VERSION) into $(LOCALBIN) ..., PATH is: $(PATH)"; \
-	curl -sSfL https://ocm.software/install.sh | OCM_VERSION=$(subst v,,$(OCM_VERSION)) bash -s $(LOCALBIN) )
+	@test -x $(OCM) && $(OCM) version | grep -Fxq "  Version:  $(subst v,,$(OCM_VERSION))" || \
+	( echo "Installing OCM CLI $(OCM_VERSION) into $(LOCALBIN) ..."; \
+	curl -fsSL "https://github.com/open-component-model/open-component-model/releases/download/$(OCM_VERSION)/ocm-$(OCM_OS)-$(OCM_ARCH)" --output "$(OCM)" && chmod +x "$(OCM)" )
