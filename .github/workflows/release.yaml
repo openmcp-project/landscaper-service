@@ -13,6 +13,7 @@ jobs:
   release_tag:
     name: Release version
     runs-on: ubuntu-latest
+    environment: release
     steps:
       - name: Create GitHub App token
         uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3
@@ -64,18 +65,18 @@ jobs:
           AUTHOR_NAME=$(git log -1 --pretty=format:'%an')
           AUTHOR_EMAIL=$(git log -1 --pretty=format:'%ae')
           echo "Tagging as $AUTHOR_NAME <$AUTHOR_EMAIL>"
-          
+
           echo "AUTHOR_NAME=$AUTHOR_NAME" >> $GITHUB_ENV
           echo "AUTHOR_EMAIL=$AUTHOR_EMAIL" >> $GITHUB_ENV
-          
+
           git config user.name "$AUTHOR_NAME"
           git config user.email "$AUTHOR_EMAIL"
-          
+
           git tag -a "${{ env.version }}" -m "Release ${{ env.version }}"
           git push origin "${{ env.version }}"
-          
+
           NESTED_GO_MODULES="integration-test"
-          
+
           for MODULE in $NESTED_GO_MODULES; do
             git tag -a "${MODULE}/${{ env.version }}" -m "Release ${{ env.version }}"
             git push origin "${MODULE}/${{ env.version }}"
@@ -97,12 +98,12 @@ jobs:
         if: ${{ env.SKIP != 'true' }}
         run: |
           echo "${{ env.version }}-dev" > VERSION
-                    
+
           git config user.name "${{ env.AUTHOR_NAME }}"
           git config user.email "${{ env.AUTHOR_EMAIL }}"
           git add VERSION
           git add go.mod
           git add integration-test/go.mod
-          
+
           git commit -m "chore(release): Update VERSION to ${{ env.version }}-dev"
           git push origin main
